@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: food-app
+    env: docker
+    dockerfilePath: Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    envVars:
+      # Enable BuildKit/buildx on Render for faster builds.
+      - key: DOCKER_BUILDKIT
+        value: "1"
+      # Set this to your Render URL (e.g., https://food-app.onrender.com)
+      - key: APP_URL
+        value: https://your-domain
+      # Re-use the production settings already baked into the image; override here if needed.
+      - key: APP_ENV
+        value: production
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLOUDINARY_FOLDER
+        value: afc
