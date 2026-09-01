@@ -4,7 +4,7 @@
             <h1>Welcome back</h1>
             <p style="color:rgba(0,0,0,0.6); margin:4px 0 0;">Use your staff credentials to access the admin.</p>
         </div>
-        <a href="/" style="color:#523700; font-weight:700; text-decoration:none;">Back to site</a>
+        <a href="/" style="color:var(--af-brown); font-weight:700; text-decoration:none;">Back to site</a>
     </div>
 
     <!-- Session Status -->
@@ -30,22 +30,22 @@
 
         <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:4px;">
             <label for="remember_me" style="display:flex; align-items:center; gap:8px; color:rgba(0,0,0,0.65);">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="text-sm">{{ __('Remember me') }}</span>
+                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                 <span class="text-sm">{{ __('Remember me') }}</span>
             </label>
             @if (Route::has('password.request'))
-                <a style="color:#523700; font-weight:700;" href="{{ route('password.request') }}">
+                <a style="color:var(--af-brown); font-weight:700;" href="{{ route('password.request') }}">
                     {{ __('Forgot password?') }}
                 </a>
             @endif
         </div>
 
-        <x-primary-button style="justify-content:center; background:#523700; border-radius:10px; padding:10px 14px; font-weight:700;">
+        <x-primary-button style="justify-content:center; background:var(--af-brown); border-radius:10px; padding:10px 14px; font-weight:700;">
             {{ __('Log in') }}
         </x-primary-button>
     </form>
 
     <div style="margin-top:14px; color:rgba(0,0,0,0.65);">
-        New staff? <a style="color:#523700; font-weight:700;" href="{{ route('register') }}">Request access</a>
+        New staff? <a style="color:var(--af-brown); font-weight:700;" href="{{ route('register') }}">Request access</a>
     </div>
 </x-guest-layout>
