@@ -18,9 +18,9 @@
   --af-border: #e2e8e1;
   --af-line: rgba(56, 90, 55, 0.12);
   
-  --af-shadow-sm: 0 1px 3px rgba(18, 40, 17, 0.05);
-  --af-shadow-md: 0 4px 12px rgba(18, 40, 17, 0.06);
-  --af-shadow-lg: 0 12px 32px rgba(18, 40, 17, 0.1);
+  --af-shadow-sm: none;
+  --af-shadow-md: none;
+  --af-shadow-lg: none;
   
   --af-radius-lg: 8px;
   --af-radius-md: 8px;
@@ -330,7 +330,6 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  max-width: 760px;
 }
 
 .af-hero-content {
