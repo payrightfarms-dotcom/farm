@@ -1215,7 +1215,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const bindVideoIntersectionAutoplay = () => {
-    const videos = document.querySelectorAll(".af-process-video-card video");
+    const videos = document.querySelectorAll(".af-process-video-card video, .af-gallery-autoplay");
     if (!videos.length) return;
 
     if ("IntersectionObserver" in window) {

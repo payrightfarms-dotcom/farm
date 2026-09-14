@@ -181,13 +181,19 @@
     <section class="af-gallery-section" aria-label="Farm and processing gallery">
       <div class="af-container af-gallery-grid">
         <figure class="af-gallery-main">
-          <img
-            src="https://landgefluegel.de/wp-content/uploads/2023/03/2007-1-2048x1360.jpg"
-            alt="Poultry processing production line with workers and conveyor belts"
-            loading="lazy"
-            decoding="async"
-            onerror="this.hidden=true"
-          />
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            preload="auto"
+            poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.jpg"
+            class="af-gallery-autoplay"
+          >
+            <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
+          </video>
           <figcaption>
             <strong>Processing capacity</strong>
             <span>Organized line flow from dressing to packing.</span>
