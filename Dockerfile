@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Builder: install PHP extensions, composer, node, and build assets
-FROM php:8.3-fpm-bullseye AS builder
+FROM php:8.3-fpm-bookworm AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -38,7 +38,7 @@ RUN npm ci --no-progress \
  && rm -rf node_modules
 
 # Runtime image: Nginx + PHP-FPM with Opcache
-FROM php:8.3-fpm-bullseye
+FROM php:8.3-fpm-bookworm
 
 ARG DEBIAN_FRONTEND=noninteractive
 
