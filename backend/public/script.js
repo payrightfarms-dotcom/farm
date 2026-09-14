@@ -1214,6 +1214,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const bindVideoIntersectionAutoplay = () => {
+    const videos = document.querySelectorAll(".af-process-video-card video");
+    if (!videos.length) return;
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+              video.muted = true;
+              const playPromise = video.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(() => {});
+              }
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      videos.forEach((v) => observer.observe(v));
+    }
+  };
+
   const bindWhatsAppButtons = () => {
     document.querySelectorAll("[data-whatsapp-btn]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -1238,6 +1263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initNav();
     initCartOverlay();
     bindCartQuantityButtons();
+    bindVideoIntersectionAutoplay();
 
     // Initialize filter state BEFORE binding filter buttons or applying filters
     if (dom.menuFilters) {

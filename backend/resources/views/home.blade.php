@@ -148,7 +148,8 @@
               muted
               loop
               playsinline
-              preload="metadata"
+              webkit-playsinline
+              preload="auto"
               poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.jpg"
             >
               <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
