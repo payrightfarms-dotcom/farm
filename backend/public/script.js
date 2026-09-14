@@ -1214,17 +1214,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const bind10sVideoLoops = () => {
-    document.querySelectorAll("video[data-10s-loop]").forEach((video) => {
-      video.addEventListener("timeupdate", () => {
-        if (video.currentTime >= 10) {
-          video.currentTime = 0;
-          video.play().catch(() => {});
-        }
-      });
-    });
-  };
-
   const bindWhatsAppButtons = () => {
     document.querySelectorAll("[data-whatsapp-btn]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -1249,7 +1238,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initNav();
     initCartOverlay();
     bindCartQuantityButtons();
-    bind10sVideoLoops();
 
     // Initialize filter state BEFORE binding filter buttons or applying filters
     if (dom.menuFilters) {

@@ -143,21 +143,16 @@
             Chicken buyers need confidence before they place volume orders: bird health, slaughter cleanliness, weight consistency, storage condition, and collection timing. The public site now explains those points clearly instead of only showing a price list.
           </p>
           <div class="af-process-video-card">
-            <div class="af-video-badge">
-              <span class="af-video-dot"></span>
-              <span>Farm Video · 10s</span>
-            </div>
             <video
               autoplay
               muted
               loop
               playsinline
               preload="metadata"
-              data-10s-loop
               poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.jpg"
             >
-              <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4#t=0,10" type="video/mp4" />
-              <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4#t=0,10" type="video/mp4" />
+              <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
