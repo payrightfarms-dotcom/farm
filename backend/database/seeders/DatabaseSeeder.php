@@ -56,84 +56,257 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-    private function seedMenuAndOrders(): void
+    public function seedMenuAndOrders(): void
     {
-        if (Category::count() > 0 || MenuItem::count() > 0) {
-            return;
-        }
+        // Delete existing items and categories to ensure fresh clean list
+        OrderItem::query()->delete();
+        Order::query()->delete();
+        MenuItem::query()->delete();
+        Category::query()->delete();
 
-        $categories = [
-            ['name' => 'Live Chickens', 'description' => 'Healthy, naturally raised live birds', 'sort_order' => 1],
-            ['name' => 'Dressed & Processed', 'description' => 'Machine dressed whole chickens, fresh or frozen', 'sort_order' => 2],
-            ['name' => 'Chicken Cuts & Parts', 'description' => 'Freshly cut chicken parts packaged to order', 'sort_order' => 3],
-        ];
-
-        $categories = collect($categories)->map(fn ($cat) => Category::create($cat));
-
-        $menuItems = [
+        $categoriesData = [
             [
-                'category' => 'Live Chickens',
-                'name' => 'Live Broiler (Large)',
-                'description' => 'Average weight 2.5kg - 3kg. Perfect for home or commercial processing.',
-                'price' => 4500,
-                'image_url' => 'https://images.unsplash.com/photo-1604848698030-c434ba08eca1?q=80&w=600&auto=format&fit=crop',
-                'stock' => 150,
-                'stock_unit' => 'birds',
+                'name' => 'Eggs',
+                'description' => 'Fresh farm-raised poultry eggs',
                 'sort_order' => 1,
             ],
             [
-                'category' => 'Live Chickens',
-                'name' => 'Live Layer (Parent Stock)',
-                'description' => 'Productive parent stock layers. Strong and healthy.',
-                'price' => 3500,
-                'image_url' => 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=600&auto=format&fit=crop',
-                'stock' => 200,
-                'stock_unit' => 'birds',
+                'name' => 'Breedwell Feeds',
+                'description' => 'High quality Breedwell poultry feeds',
                 'sort_order' => 2,
             ],
             [
-                'category' => 'Dressed & Processed',
-                'name' => 'Fresh Dressed Whole Chicken',
-                'description' => 'Cleaned and eviscerated whole broiler, processed in our Slaughter House.',
-                'price' => 5500,
-                'image_url' => 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=600&auto=format&fit=crop',
-                'stock' => 80,
-                'stock_unit' => 'birds',
+                'name' => 'Olam Feeds',
+                'description' => 'Premium Olam Ultima feed formulations',
                 'sort_order' => 3,
             ],
             [
-                'category' => 'Dressed & Processed',
-                'name' => 'Frozen Dressed Whole Chicken',
-                'description' => 'Blast frozen whole dressed broiler, vacuum sealed for preservation.',
-                'price' => 5700,
-                'image_url' => 'https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=600&auto=format&fit=crop',
-                'stock' => 100,
-                'stock_unit' => 'birds',
+                'name' => 'Chikun Feeds',
+                'description' => 'Chikun brand poultry feeds',
                 'sort_order' => 4,
             ],
             [
-                'category' => 'Chicken Cuts & Parts',
-                'name' => 'Chicken Wings (1kg Pack)',
-                'description' => 'Freshly cut and packaged broiler wings. Premium quality.',
-                'price' => 2800,
-                'image_url' => 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=600&auto=format&fit=crop',
-                'stock' => 50,
-                'stock_unit' => 'packs',
+                'name' => 'Chicken & Cuts',
+                'description' => 'Dressed whole chicken, quarters, and processed chicken parts',
                 'sort_order' => 5,
-            ],
-            [
-                'category' => 'Chicken Cuts & Parts',
-                'name' => 'Chicken Drumsticks (1kg Pack)',
-                'description' => 'Freshly cut juicy drumsticks, packaged and chilled.',
-                'price' => 3200,
-                'image_url' => 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=600&auto=format&fit=crop',
-                'stock' => 60,
-                'stock_unit' => 'packs',
-                'sort_order' => 6,
             ],
         ];
 
-        $menuItems = collect($menuItems)->map(function ($item) use ($categories) {
+        $categories = collect($categoriesData)->map(fn ($cat) => Category::create($cat));
+
+        $menuItemsData = [
+            // Eggs
+            [
+                'category' => 'Eggs',
+                'name' => 'Crates of Egg',
+                'description' => 'Fresh farm-raised eggs packaged in standard 30-egg crates.',
+                'price' => 4200,
+                'image_url' => 'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=800&auto=format&fit=crop',
+                'stock' => 100,
+                'stock_unit' => 'crates',
+                'sort_order' => 1,
+            ],
+
+            // Breedwell Feeds
+            [
+                'category' => 'Breedwell Feeds',
+                'name' => 'Breedwell Professional Starter',
+                'description' => 'High-protein starter feed formula for young chicks.',
+                'price' => 14500,
+                'image_url' => 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 2,
+            ],
+            [
+                'category' => 'Breedwell Feeds',
+                'name' => 'Breedwell Professional Grower',
+                'description' => 'Balanced grower feed for healthy poultry development.',
+                'price' => 13800,
+                'image_url' => 'https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 3,
+            ],
+            [
+                'category' => 'Breedwell Feeds',
+                'name' => 'Breedwell Professional Finisher',
+                'description' => 'Finisher feed blend engineered for optimal weight gain.',
+                'price' => 14200,
+                'image_url' => 'https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 4,
+            ],
+
+            // Olam Feeds
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Starter',
+                'description' => 'High-nutrition starter feed for growing poultry.',
+                'price' => 15000,
+                'image_url' => 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 5,
+            ],
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Super Starter',
+                'description' => 'Premium super starter formulation for early chick vitality.',
+                'price' => 15800,
+                'image_url' => 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 6,
+            ],
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Finisher',
+                'description' => 'High-energy finisher feed for high yield broilers.',
+                'price' => 14800,
+                'image_url' => 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 7,
+            ],
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Starter Plus',
+                'description' => 'Enriched starter feed blend with additional amino acids.',
+                'price' => 15500,
+                'image_url' => 'https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 8,
+            ],
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Super Starter Plus',
+                'description' => 'Advanced super starter feed blend for maximum chick development.',
+                'price' => 16200,
+                'image_url' => 'https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 9,
+            ],
+            [
+                'category' => 'Olam Feeds',
+                'name' => 'Ultima Finisher Plus',
+                'description' => 'Premium finisher feed blend for top market weight.',
+                'price' => 15200,
+                'image_url' => 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 10,
+            ],
+
+            // Chikun Feeds
+            [
+                'category' => 'Chikun Feeds',
+                'name' => 'Chikun Layer Crumble',
+                'description' => 'Specially formulated layer crumble for optimal egg laying.',
+                'price' => 14000,
+                'image_url' => 'https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 11,
+            ],
+            [
+                'category' => 'Chikun Feeds',
+                'name' => 'Chikun Finisher',
+                'description' => 'Quality finisher feed for commercial broilers.',
+                'price' => 13900,
+                'image_url' => 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=800&auto=format&fit=crop',
+                'stock' => 50,
+                'stock_unit' => 'bags',
+                'sort_order' => 12,
+            ],
+
+            // Chicken & Cuts
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Whole Chicken',
+                'description' => 'Cleaned and eviscerated whole broiler, machine processed.',
+                'price' => 5500,
+                'image_url' => 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=800&auto=format&fit=crop',
+                'stock' => 100,
+                'stock_unit' => 'birds',
+                'sort_order' => 13,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Cut 4 Chicken',
+                'description' => 'Cleaned dressed whole chicken neatly quartered into 4 portions.',
+                'price' => 5700,
+                'image_url' => 'https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=800&auto=format&fit=crop',
+                'stock' => 80,
+                'stock_unit' => 'birds',
+                'sort_order' => 14,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Laps (Leg Quarters)',
+                'description' => 'Fresh chicken leg quarters (thighs and drumsticks).',
+                'price' => 3500,
+                'image_url' => 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=800&auto=format&fit=crop',
+                'stock' => 60,
+                'stock_unit' => 'kg',
+                'sort_order' => 15,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Gizzard',
+                'description' => 'Cleaned and hygienically prepped fresh chicken gizzards.',
+                'price' => 3000,
+                'image_url' => 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?q=80&w=800&auto=format&fit=crop',
+                'stock' => 40,
+                'stock_unit' => 'kg',
+                'sort_order' => 16,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Head',
+                'description' => 'Cleaned chicken heads for culinary preparations and broths.',
+                'price' => 1200,
+                'image_url' => 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=800&auto=format&fit=crop',
+                'stock' => 30,
+                'stock_unit' => 'kg',
+                'sort_order' => 17,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Feet',
+                'description' => 'Hygienically cleaned and processed chicken feet.',
+                'price' => 1500,
+                'image_url' => 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=800&auto=format&fit=crop',
+                'stock' => 40,
+                'stock_unit' => 'kg',
+                'sort_order' => 18,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Heart',
+                'description' => 'Freshly processed chicken hearts.',
+                'price' => 2500,
+                'image_url' => 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=800&auto=format&fit=crop',
+                'stock' => 25,
+                'stock_unit' => 'kg',
+                'sort_order' => 19,
+            ],
+            [
+                'category' => 'Chicken & Cuts',
+                'name' => 'Neck',
+                'description' => 'Cleaned and prepped chicken necks.',
+                'price' => 1800,
+                'image_url' => 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=800&auto=format&fit=crop',
+                'stock' => 35,
+                'stock_unit' => 'kg',
+                'sort_order' => 20,
+            ],
+        ];
+
+        $menuItems = collect($menuItemsData)->map(function ($item) use ($categories) {
             $category = $categories->firstWhere('name', $item['category']);
 
             return MenuItem::create([
@@ -148,33 +321,5 @@ class DatabaseSeeder extends Seeder
                 'sort_order' => $item['sort_order'],
             ]);
         });
-
-        $order = Order::create([
-            'code' => Str::upper(Str::random(8)),
-            'status' => 'paid',
-            'channel' => 'pos',
-            'customer_name' => 'Walk-in Customer',
-            'subtotal' => 5500,
-            'tax' => 0,
-            'discount' => 0,
-            'total' => 5500,
-            'paid_at' => now(),
-        ]);
-
-        OrderItem::create([
-            'order_id' => $order->id,
-            'menu_item_id' => $menuItems[2]->id ?? null,
-            'name' => 'Fresh Dressed Whole Chicken',
-            'quantity' => 1,
-            'unit_price' => 5500,
-            'total' => 5500,
-        ]);
-
-        Payment::create([
-            'order_id' => $order->id,
-            'amount' => 5500,
-            'method' => 'cash',
-            'paid_at' => now(),
-        ]);
     }
 }
