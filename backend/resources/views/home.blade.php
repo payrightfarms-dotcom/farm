@@ -27,18 +27,7 @@
   <header class="af-header">
     <div class="af-container af-header-inner">
       <div class="af-logo-wrap">
-        <svg viewBox="0 0 100 100" width="46" height="46" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;" aria-label="Payright Farms 4-Piece Jigsaw Logo">
-          <g stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
-            <!-- Top-Left Piece: Feed Sales (Forest Green) -->
-            <path d="M 8 8 H 44 C 44 18 54 18 54 26 C 54 34 44 34 44 46 C 34 46 34 36 26 36 C 18 36 18 46 8 46 Z" fill="#112414" />
-            <!-- Top-Right Piece: Chicken Processing (Sage Green) -->
-            <path d="M 54 8 H 92 V 46 C 82 46 82 56 74 56 C 66 56 66 46 54 46 C 44 34 54 34 54 26 C 54 18 44 18 44 8 Z" fill="#3f6843" />
-            <!-- Bottom-Left Piece: Chicken Sales (Amber Gold) -->
-            <path d="M 8 54 C 18 54 18 44 26 44 C 34 44 34 54 44 54 C 44 64 54 64 54 74 C 54 84 44 84 44 92 H 8 Z" fill="#bd7d12" />
-            <!-- Bottom-Right Piece: Egg Sales (Poultry Green) -->
-            <path d="M 54 54 C 66 54 66 64 74 64 C 82 64 82 54 92 54 V 92 H 44 C 44 84 54 84 54 74 C 54 64 44 64 44 54 Z" fill="#2d5231" />
-          </g>
-        </svg>
+        <img src="{{ asset('assets/logo.png') }}" alt="Payright Farms Logo" style="width: 44px; height: 44px; object-fit: contain; flex-shrink: 0;" />
         <div class="af-logo-text">
           <span class="af-logo-name">Payright Farms</span>
           <span class="af-logo-tagline">Right Product · Right Price · Right Choice</span>
