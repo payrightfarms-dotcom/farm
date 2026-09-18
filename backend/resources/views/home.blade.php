@@ -27,16 +27,16 @@
   <header class="af-header">
     <div class="af-container af-header-inner">
       <div class="af-logo-wrap">
-        <svg viewBox="0 0 100 100" width="44" height="44" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;" aria-label="Payright Farms 4-Piece Integrated Jigsaw Logo">
-          <g stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round">
-            <!-- Top-Left: Feed Sales (Forest Green) -->
-            <path d="M 10 10 H 42 C 42 18 52 18 52 10 H 48 V 42 C 34 42 34 52 48 52 H 10 Z" fill="#112414" />
-            <!-- Top-Right: Chicken Processing (Sage Green) -->
-            <path d="M 52 10 H 90 V 48 H 52 C 52 34 62 34 62 24 C 62 14 52 14 52 10 Z" fill="#3f6843" />
-            <!-- Bottom-Left: Chicken Sales (Amber Gold) -->
-            <path d="M 10 52 H 48 C 48 66 34 66 34 76 C 34 86 48 86 48 90 H 10 Z" fill="#bd7d12" />
-            <!-- Bottom-Right: Egg Sales (Poultry Green) -->
-            <path d="M 52 52 H 90 V 90 H 52 C 66 90 66 76 52 76 V 52 Z" fill="#2d5231" />
+        <svg viewBox="0 0 100 100" width="46" height="46" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;" aria-label="Payright Farms 4-Piece Jigsaw Logo">
+          <g stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+            <!-- Top-Left Piece: Feed Sales (Forest Green) -->
+            <path d="M 8 8 H 44 C 44 18 54 18 54 26 C 54 34 44 34 44 46 C 34 46 34 36 26 36 C 18 36 18 46 8 46 Z" fill="#112414" />
+            <!-- Top-Right Piece: Chicken Processing (Sage Green) -->
+            <path d="M 54 8 H 92 V 46 C 82 46 82 56 74 56 C 66 56 66 46 54 46 C 44 34 54 34 54 26 C 54 18 44 18 44 8 Z" fill="#3f6843" />
+            <!-- Bottom-Left Piece: Chicken Sales (Amber Gold) -->
+            <path d="M 8 54 C 18 54 18 44 26 44 C 34 44 34 54 44 54 C 44 64 54 64 54 74 C 54 84 44 84 44 92 H 8 Z" fill="#bd7d12" />
+            <!-- Bottom-Right Piece: Egg Sales (Poultry Green) -->
+            <path d="M 54 54 C 66 54 66 64 74 64 C 82 64 82 54 92 54 V 92 H 44 C 44 84 54 84 54 74 C 54 64 44 64 44 54 Z" fill="#2d5231" />
           </g>
         </svg>
         <div class="af-logo-text">
@@ -446,7 +446,6 @@
             Payright Farms is a poultry operation covering rearing, live bird sales, slaughter-house processing, and distribution to retail and wholesale buyers. We identified a gap in the local market for affordable, hygienically processed chicken and built a facility to close it.
           </p>
           <div class="af-mission-card">
-            <span class="af-kicker">OUR MISSION</span>
             <p>"To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice."</p>
           </div>
           <p>
