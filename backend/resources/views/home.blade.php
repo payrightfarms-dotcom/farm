@@ -80,10 +80,10 @@
       {{-- Hero content --}}
       <div class="af-hero-inner">
         <div class="af-hero-content">
-          <p class="af-kicker">Motto: Right Product · Right Price · Right Choice</p>
+          <p class="af-kicker">Right Product · Right Price · Right Choice</p>
           <h1>Healthy birds, clean processing, dependable chicken & feed supply.</h1>
           <p class="af-lead">
-            <strong>Our Mission:</strong> To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice.
+            To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice.
           </p>
           <div class="af-hero-actions">
             <a href="#inventory" class="af-btn af-btn-primary">View Stock Sheet</a>
