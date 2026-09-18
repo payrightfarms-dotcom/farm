@@ -448,6 +448,30 @@ a {
   border-bottom: 1px solid var(--af-border);
 }
 
+.af-mission-card {
+  background: var(--af-green-light);
+  border: 1px solid var(--af-border);
+  border-left: 4px solid var(--af-accent-gold);
+  border-radius: var(--af-radius-md);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.af-mission-card .af-kicker {
+  font-size: 0.72rem;
+  margin-bottom: 0.35rem;
+  color: var(--af-accent-gold);
+}
+
+.af-mission-card p {
+  margin: 0;
+  font-family: var(--af-font-heading);
+  font-size: 1.12rem;
+  font-style: italic;
+  color: var(--af-green-dark);
+  line-height: 1.5;
+}
+
 .af-process {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;

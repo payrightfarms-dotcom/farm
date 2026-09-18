@@ -27,15 +27,21 @@
   <header class="af-header">
     <div class="af-container af-header-inner">
       <div class="af-logo-wrap">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 42px; height: 42px; fill: none; stroke: var(--af-green-dark); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; background: var(--af-white); border: 1px solid var(--af-border); border-radius: 10px; padding: 4px;">
-          <path d="M50 15 C35 25, 25 45, 25 60 C25 75, 35 85, 50 85 C65 85, 75 75, 75 60 C75 45, 65 25, 50 15 Z" fill="var(--af-green-light)" />
-          <circle cx="50" cy="50" r="12" fill="var(--af-green-sage)" />
-          <path d="M45 42 Q50 35 55 42" stroke="#fff" stroke-width="3" />
-          <path d="M50 12 V22M12 50 H22M88 50 H78M50 88 V78" stroke="var(--af-green-dark)" stroke-width="2" />
+        <svg viewBox="0 0 100 100" width="44" height="44" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;" aria-label="Payright Farms 4-Piece Integrated Jigsaw Logo">
+          <g stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round">
+            <!-- Top-Left: Feed Sales (Forest Green) -->
+            <path d="M 10 10 H 42 C 42 18 52 18 52 10 H 48 V 42 C 34 42 34 52 48 52 H 10 Z" fill="#112414" />
+            <!-- Top-Right: Chicken Processing (Sage Green) -->
+            <path d="M 52 10 H 90 V 48 H 52 C 52 34 62 34 62 24 C 62 14 52 14 52 10 Z" fill="#3f6843" />
+            <!-- Bottom-Left: Chicken Sales (Amber Gold) -->
+            <path d="M 10 52 H 48 C 48 66 34 66 34 76 C 34 86 48 86 48 90 H 10 Z" fill="#bd7d12" />
+            <!-- Bottom-Right: Egg Sales (Poultry Green) -->
+            <path d="M 52 52 H 90 V 90 H 52 C 66 90 66 76 52 76 V 52 Z" fill="#2d5231" />
+          </g>
         </svg>
         <div class="af-logo-text">
           <span class="af-logo-name">Payright Farms</span>
-          <span class="af-logo-tagline">Poultry Distributor & Processing</span>
+          <span class="af-logo-tagline">Right Product · Right Price · Right Choice</span>
         </div>
       </div>
 
@@ -74,10 +80,10 @@
       {{-- Hero content --}}
       <div class="af-hero-inner">
         <div class="af-hero-content">
-          <p class="af-kicker">Payright Farms — Direct-from-Farm Poultry Supply</p>
-          <h1>Healthy birds, clean processing, dependable chicken supply.</h1>
+          <p class="af-kicker">Motto: Right Product · Right Price · Right Choice</p>
+          <h1>Healthy birds, clean processing, dependable chicken & feed supply.</h1>
           <p class="af-lead">
-            We raise and process broiler chickens with practical farm controls: good feed, clean housing, careful handling, chilled storage, and clear stock updates for families, restaurants, retailers, and wholesale buyers.
+            <strong>Our Mission:</strong> To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice.
           </p>
           <div class="af-hero-actions">
             <a href="#inventory" class="af-btn af-btn-primary">View Stock Sheet</a>
@@ -86,16 +92,16 @@
 
           <div class="af-hero-metrics">
             <div>
-              <strong>Live Birds</strong>
-              <span>Broilers and layers available</span>
+              <strong>Feed Sales</strong>
+              <span>Breedwell, Olam & Chikun</span>
             </div>
             <div>
-              <strong>Clean Processing</strong>
-              <span>Dressed whole birds and cuts</span>
+              <strong>Processing</strong>
+              <span>Dressed whole birds & cuts</span>
             </div>
             <div>
-              <strong>Cold Handling</strong>
-              <span>Fresh or blast-frozen supply</span>
+              <strong>Egg Sales</strong>
+              <span>Bulk & retail crates</span>
             </div>
           </div>
 
@@ -108,16 +114,16 @@
       </div>
     </section>
 
-    {{-- ================ HIGHLIGHTS ================ --}}
+    {{-- ================ HIGHLIGHTS (4 INTEGRATED BUSINESS PILLARS) ================ --}}
     <section class="af-highlights-section">
       <div class="af-container">
         <div class="af-highlights-grid">
           @php
             $highlights = [
-              ['icon' => '01', 'label' => 'Live Broilers & Layers', 'sub' => 'Healthy farm-raised birds'],
-              ['icon' => '02', 'label' => 'Same-Day Dressing', 'sub' => 'Clean scalding, defeathering, and evisceration'],
-              ['icon' => '03',  'label' => 'Fresh & Blast Frozen', 'sub' => 'Chilled handling for better shelf life'],
-              ['icon' => '04', 'label' => 'Farm Gate & Delivery', 'sub' => 'Retail orders and wholesale contracts'],
+              ['icon' => '🧩 01', 'label' => 'Feed Sales', 'sub' => 'Breedwell, Olam & Chikun poultry feeds'],
+              ['icon' => '🧩 02', 'label' => 'Chicken Processing', 'sub' => 'Clean slaughter house & portioning'],
+              ['icon' => '🧩 03', 'label' => 'Chicken Sales', 'sub' => 'Fresh whole chickens & cut parts'],
+              ['icon' => '🧩 04', 'label' => 'Egg Sales', 'sub' => 'Fresh crates in bulk & retail'],
             ];
           @endphp
           @foreach($highlights as $h)
@@ -439,6 +445,10 @@
           <p>
             Payright Farms is a poultry operation covering rearing, live bird sales, slaughter-house processing, and distribution to retail and wholesale buyers. We identified a gap in the local market for affordable, hygienically processed chicken and built a facility to close it.
           </p>
+          <div class="af-mission-card">
+            <span class="af-kicker">OUR MISSION</span>
+            <p>"To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice."</p>
+          </div>
           <p>
             Our birds are raised with attention to feed, water, ventilation, stocking density, and handling. At the slaughter house, birds are processed with a clean workflow and moved into chilled storage or dispatch. We supply fresh and blast-frozen products to households, restaurants, food vendors, retailers, and commercial buyers.
           </p>
