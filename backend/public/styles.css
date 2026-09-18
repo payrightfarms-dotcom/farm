@@ -1499,13 +1499,34 @@ a {
 .af-footer {
   background-color: var(--af-green-dark);
   color: var(--af-white);
-  padding: 3.5rem 0;
+  padding: 4rem 0 2.5rem;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
+.af-footer-brand {
+  margin-bottom: 2rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.af-footer-mission {
+  font-family: var(--af-font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 1.25rem 0 0;
+  line-height: 1.55;
+}
+
+.af-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.75rem;
+}
+
 .af-footer span {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   opacity: 0.85;
   font-weight: 600;
 }

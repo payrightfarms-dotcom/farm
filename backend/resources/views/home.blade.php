@@ -665,7 +665,21 @@
 
   <footer class="af-footer">
     <div class="af-container">
-      <span>© <span id="year"></span> Payright Farms · Commercial Poultry Distributor & Processing Facility</span>
+      <div class="af-footer-brand">
+        <div style="display:flex; align-items:center; justify-content:center; gap:0.85rem; margin-bottom:1rem;">
+          <img src="{{ asset('assets/logo.png') }}" alt="Payright Farms Logo" style="width: 48px; height: 48px; object-fit: contain; flex-shrink: 0;" />
+          <div style="text-align:left;">
+            <div style="font-size:1.2rem; font-weight:800; color:#ffffff; letter-spacing:-0.02em;">Payright Farms</div>
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.6);">Right Product · Right Price · Right Choice</div>
+          </div>
+        </div>
+        <p class="af-footer-mission">
+          "To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice."
+        </p>
+      </div>
+      <div class="af-footer-bottom">
+        <span>© <span id="year"></span> Payright Farms · Commercial Poultry Distributor & Processing Facility</span>
+      </div>
     </div>
   </footer>
 
