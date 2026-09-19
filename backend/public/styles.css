@@ -4,25 +4,31 @@
 */
 
 :root {
-  --af-green-dark: #102018;
-  --af-green-sage: #466b4f;
-  --af-green-light: #edf4ed;
-  --af-accent-gold: #b87918;
-  --af-accent-gold-light: #fff5df;
-  --af-clay: #8d4931;
-  --af-cold: #e7f2f4;
-  --af-ink: #1d241f;
-  --af-ink-soft: #5a625d;
-  --af-charcoal: #151817;
-  --af-cream: #fbfaf5;
+  --af-green-dark: #314d2d;
+  --af-green-sage: #6f8f43;
+  --af-green-light: #eff6df;
+  --af-accent-gold: #f2a91f;
+  --af-accent-gold-light: #fff4cf;
+  --af-clay: #c85a28;
+  --af-cold: #e9f4ef;
+  --af-ink: #342414;
+  --af-ink-soft: #75624e;
+  --af-charcoal: #241912;
+  --af-cream: #fff8e8;
+  --af-egg: #fff0bd;
+  --af-red: #b83b27;
+  --af-feed: #83a83f;
+  --af-processing: #2f8b84;
+  --af-chicken: #d95f31;
+  --af-eggs: #e8b72f;
   --af-white: #ffffff;
-  --af-bg: #f7f8f3;
-  --af-border: #dde4dc;
-  --af-line: rgba(56, 90, 55, 0.12);
+  --af-bg: #fffaf0;
+  --af-border: #eadfc8;
+  --af-line: rgba(200, 90, 40, 0.12);
   
-  --af-shadow-sm: 0 8px 24px rgba(20, 32, 24, 0.06);
-  --af-shadow-md: 0 16px 42px rgba(20, 32, 24, 0.09);
-  --af-shadow-lg: 0 24px 70px rgba(20, 32, 24, 0.12);
+  --af-shadow-sm: 0 10px 24px rgba(90, 62, 28, 0.08);
+  --af-shadow-md: 0 18px 44px rgba(90, 62, 28, 0.12);
+  --af-shadow-lg: 0 28px 70px rgba(90, 62, 28, 0.16);
   
   --af-radius-lg: 8px;
   --af-radius-md: 8px;
@@ -87,7 +93,7 @@ a {
   text-transform: uppercase;
   font-size: 0.78rem;
   font-weight: 800;
-  color: var(--af-clay);
+  color: var(--af-red);
   margin-bottom: 0.75rem;
   display: inline-flex;
   align-items: center;
@@ -114,7 +120,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251, 250, 245, 0.96);
+  background: rgba(255, 248, 232, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--af-border);
   transition: all 0.3s ease;
@@ -153,7 +159,7 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--af-green-sage);
+  color: var(--af-clay);
 }
 
 .af-nav {
@@ -211,7 +217,7 @@ a {
 
 /* highlights strip */
 .af-highlights-section {
-  background: var(--af-cream);
+  background: #fff2c6;
   border-bottom: 1px solid var(--af-border);
   padding: 1.25rem 0;
 }
@@ -227,15 +233,15 @@ a {
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  background: var(--af-white);
-  border: 1px solid var(--af-border);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(52, 36, 20, 0.1);
   border-radius: var(--af-radius-md);
   transition: all 0.25s ease;
 }
 
 .af-highlight-card:hover {
   transform: translateY(-2px);
-  border-color: var(--af-green-sage);
+  border-color: currentColor;
   box-shadow: var(--af-shadow-sm);
 }
 
@@ -266,17 +272,53 @@ a {
   color: var(--af-ink-soft);
 }
 
+.af-piece-feed {
+  color: var(--af-feed);
+}
+
+.af-piece-processing {
+  color: var(--af-processing);
+}
+
+.af-piece-chicken {
+  color: var(--af-chicken);
+}
+
+.af-piece-eggs {
+  color: var(--af-eggs);
+}
+
+.af-piece-feed .af-highlight-icon,
+.af-piece-feed.af-jigsaw-piece span {
+  background: var(--af-feed);
+}
+
+.af-piece-processing .af-highlight-icon,
+.af-piece-processing.af-jigsaw-piece span {
+  background: var(--af-processing);
+}
+
+.af-piece-chicken .af-highlight-icon,
+.af-piece-chicken.af-jigsaw-piece span {
+  background: var(--af-chicken);
+}
+
+.af-piece-eggs .af-highlight-icon,
+.af-piece-eggs.af-jigsaw-piece span {
+  background: var(--af-eggs);
+  color: var(--af-ink);
+}
+
 /* Hero Section - Full Background */
 .af-hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(16, 32, 24, 0.98), rgba(41, 66, 45, 0.9)),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 110px),
-    var(--af-green-dark);
+    linear-gradient(135deg, rgba(49, 77, 45, 0.98), rgba(184, 59, 39, 0.74)),
+    var(--af-red);
 }
 
 .af-hero::after {
@@ -286,8 +328,8 @@ a {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(to bottom, rgba(9, 17, 13, 0.06), transparent 28%),
-    linear-gradient(to top, rgba(8, 19, 10, 0.45), transparent 36%);
+    linear-gradient(to bottom, rgba(36, 25, 18, 0.04), transparent 28%),
+    linear-gradient(to top, rgba(36, 25, 18, 0.42), transparent 36%);
 }
 
 .af-hero-bg {
@@ -316,9 +358,9 @@ a {
   background:
     linear-gradient(
       to right,
-      rgba(8, 19, 10, 0.92) 0%,
-      rgba(8, 19, 10, 0.76) 48%,
-      rgba(8, 19, 10, 0.34) 100%
+      rgba(36, 25, 18, 0.82) 0%,
+      rgba(82, 52, 28, 0.68) 46%,
+      rgba(49, 77, 45, 0.3) 100%
     );
 }
 
@@ -330,8 +372,9 @@ a {
   margin: 0 auto;
   padding: 5rem 0 5.5rem;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.72fr);
+  align-items: center;
+  gap: 4rem;
 }
 
 .af-hero-content {
@@ -357,7 +400,7 @@ a {
 .af-hero-content .af-lead {
   color: rgba(255, 255, 255, 0.82);
   font-size: 1.18rem;
-  max-width: 660px;
+  max-width: 690px;
 }
 
 .af-hero-actions {
@@ -421,10 +464,94 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.af-hero-brand {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  gap: 1rem;
+}
+
+.af-hero-logo-card {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.1rem;
+  border-radius: var(--af-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 248, 232, 0.92);
+  box-shadow: var(--af-shadow-lg);
+}
+
+.af-hero-logo-card img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.af-hero-logo-card span {
+  display: block;
+  color: var(--af-red);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.af-hero-logo-card strong {
+  color: var(--af-ink);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.af-jigsaw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.af-jigsaw-piece {
+  min-height: 168px;
+  padding: 1rem;
+  border-radius: var(--af-radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: var(--af-ink);
+  box-shadow: var(--af-shadow-md);
+}
+
+.af-jigsaw-piece span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--af-radius-sm);
+  color: var(--af-white);
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin-bottom: 0.9rem;
+}
+
+.af-jigsaw-piece strong {
+  display: block;
+  color: var(--af-ink);
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.af-jigsaw-piece small {
+  display: block;
+  color: var(--af-ink-soft);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
 /* Hero buttons need to pop on dark background */
 .af-hero .af-btn-primary {
   background-color: var(--af-accent-gold);
-  color: var(--af-white);
+  color: var(--af-ink);
   box-shadow: 0 10px 26px rgba(184, 121, 24, 0.32);
 }
 
@@ -446,12 +573,12 @@ a {
 /* Farm process */
 .af-process-section {
   background:
-    linear-gradient(180deg, var(--af-white) 0%, var(--af-cream) 100%);
+    linear-gradient(180deg, var(--af-white) 0%, #fff3cf 100%);
   border-bottom: 1px solid var(--af-border);
 }
 
 .af-mission-card {
-  background: var(--af-green-light);
+  background: var(--af-egg);
   border: 1px solid var(--af-border);
   border-left: 4px solid var(--af-accent-gold);
   border-radius: var(--af-radius-md);
@@ -545,7 +672,7 @@ a {
 }
 
 .af-supply-section {
-  background: var(--af-white);
+  background: #fffaf0;
   border-bottom: 1px solid var(--af-border);
 }
 
@@ -561,7 +688,7 @@ a {
   border: 1px solid var(--af-border);
   border-radius: var(--af-radius-lg);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 250, 245, 0.98));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 244, 207, 0.76));
   box-shadow: var(--af-shadow-sm);
 }
 
@@ -572,7 +699,7 @@ a {
   width: 38px;
   height: 38px;
   border-radius: var(--af-radius-sm);
-  background: var(--af-green-dark);
+  background: var(--af-red);
   color: var(--af-white);
   font-weight: 900;
   font-size: 0.82rem;
@@ -606,12 +733,12 @@ a {
 }
 
 .af-process-step:nth-child(2) {
-  border-left-color: var(--af-clay);
+  border-left-color: var(--af-processing);
 }
 
 .af-process-step:nth-child(3) {
-  border-left-color: #2f8f89;
-  background: linear-gradient(90deg, var(--af-white), var(--af-cold));
+  border-left-color: var(--af-accent-gold);
+  background: linear-gradient(90deg, var(--af-white), var(--af-accent-gold-light));
 }
 
 .af-process-step span {
@@ -639,7 +766,7 @@ a {
 /* Farm gallery */
 .af-gallery-section {
   padding: 0 0 6rem;
-  background: var(--af-cream);
+  background: #fff3cf;
 }
 
 .af-gallery-grid {
@@ -710,7 +837,7 @@ a {
   margin-bottom: 0.75rem;
 }
 
-/* Agribusiness Inventory Stock Sheet Table */
+/* Farm product catalog */
 .af-stock-table-wrapper {
   background: var(--af-white);
   border: 1px solid var(--af-border);
@@ -720,6 +847,102 @@ a {
   margin-bottom: 2rem;
 }
 
+.af-product-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.af-featured-grid,
+.af-catalog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.af-product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(52, 36, 20, 0.12);
+  border-radius: var(--af-radius-lg);
+  background: var(--af-white);
+  box-shadow: var(--af-shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.af-product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 90, 40, 0.34);
+  box-shadow: var(--af-shadow-md);
+}
+
+.af-product-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--af-egg);
+}
+
+.af-product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.af-product-card:hover .af-product-media img {
+  transform: scale(1.045);
+}
+
+.af-product-media .af-spec-badge {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.85rem;
+  margin: 0;
+  background: rgba(255, 248, 232, 0.94);
+  box-shadow: 0 8px 20px rgba(52, 36, 20, 0.12);
+}
+
+.af-product-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.15rem;
+}
+
+.af-product-body h3 {
+  font-family: var(--af-font-body);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--af-ink);
+  margin-bottom: 0.45rem;
+}
+
+.af-product-body .af-spec-text {
+  max-width: none;
+  min-height: 3.9em;
+}
+
+.af-product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--af-border);
+}
+
+.af-empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--af-ink-soft);
+  background: var(--af-white);
+  border: 1px solid var(--af-border);
+  border-radius: var(--af-radius-lg);
+}
+
 .af-stock-table {
   width: 100%;
   border-collapse: collapse;
@@ -727,7 +950,7 @@ a {
 }
 
 .af-stock-table th {
-  background: #f0f3ed;
+  background: var(--af-egg);
   color: var(--af-green-dark);
   font-weight: 700;
   font-size: 0.85rem;
@@ -787,8 +1010,8 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background-color: var(--af-green-light);
-  color: var(--af-green-dark);
+  background-color: var(--af-accent-gold-light);
+  color: var(--af-red);
   padding: 0.25rem 0.5rem;
   border-radius: var(--af-radius-sm);
   display: inline-block;
@@ -808,7 +1031,7 @@ a {
   font-weight: 700;
   background-color: var(--af-accent-gold-light);
   border: 1px solid rgba(198, 146, 20, 0.25);
-  color: #a16207;
+  color: #8a4f00;
   padding: 0.3rem 0.6rem;
   border-radius: var(--af-radius-sm);
   display: inline-flex;
@@ -837,7 +1060,7 @@ a {
 .af-price {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--af-green-dark);
+  color: var(--af-red);
 }
 
 /* Category Filter Chips */
@@ -868,18 +1091,18 @@ a {
 }
 
 .af-chip:hover {
-  background: var(--af-green-light);
-  color: var(--af-green-dark);
+  background: var(--af-egg);
+  color: var(--af-red);
 }
 
 .af-chip-active {
-  background: var(--af-green-dark);
+  background: var(--af-red);
   color: var(--af-white);
-  border-color: var(--af-green-dark);
+  border-color: var(--af-red);
 }
 
 .af-chip-active:hover {
-  background: var(--af-green-dark);
+  background: var(--af-red);
   color: var(--af-white);
 }
 
@@ -973,29 +1196,29 @@ a {
 }
 
 .af-btn-primary {
-  background-color: var(--af-green-dark);
+  background-color: var(--af-red);
   color: var(--af-white);
   box-shadow: 0 10px 22px rgba(16, 32, 24, 0.12);
 }
 
 .af-btn-primary:hover {
-  background-color: var(--af-green-sage);
+  background-color: var(--af-clay);
 }
 
 .af-btn-outline {
   background-color: transparent;
-  color: var(--af-green-dark);
-  border: 1px solid var(--af-green-dark);
+  color: var(--af-red);
+  border: 1px solid var(--af-red);
 }
 
 .af-btn-outline:hover {
-  background-color: var(--af-green-light);
-  border-color: var(--af-green-sage);
+  background-color: var(--af-accent-gold-light);
+  border-color: var(--af-clay);
 }
 
 .af-btn-ghost {
-  background-color: var(--af-green-light);
-  color: var(--af-green-dark);
+  background-color: var(--af-egg);
+  color: var(--af-ink);
 }
 
 .af-btn-ghost:hover {
@@ -1027,7 +1250,7 @@ a {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background-color: var(--af-accent-gold);
+  background-color: var(--af-red);
   color: var(--af-white);
   padding: 0.25rem 0.5rem;
   border-radius: var(--af-radius-sm);
@@ -1050,8 +1273,8 @@ a {
 .af-about-pills span {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--af-green-dark);
-  background: var(--af-green-light);
+  color: var(--af-red);
+  background: var(--af-accent-gold-light);
   padding: 0.5rem 1rem;
   border-radius: var(--af-radius-md);
   border: 1px solid var(--af-border);
@@ -1067,7 +1290,7 @@ a {
   font-family: var(--af-font-heading);
   font-style: italic;
   font-size: 1.35rem;
-  color: var(--af-green-sage);
+  color: var(--af-clay);
 }
 
 .af-about-card {
@@ -1088,7 +1311,7 @@ a {
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--af-accent-gold);
+  color: var(--af-red);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -1120,7 +1343,7 @@ a {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--af-green-sage);
+  color: var(--af-red);
   font-weight: 900;
 }
 
@@ -1186,7 +1409,7 @@ a {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--af-green-sage);
+  color: var(--af-red);
   margin-bottom: 0.5rem;
 }
 
@@ -1243,8 +1466,8 @@ a {
 
 .af-order-prompt {
   background:
-    linear-gradient(135deg, rgba(255, 245, 223, 0.94), rgba(255, 255, 255, 0.96)),
-    url("https://images.unsplash.com/photo-1589927986089-35812388d1f4?q=80&w=1400&auto=format&fit=crop");
+    linear-gradient(135deg, rgba(255, 240, 189, 0.94), rgba(255, 255, 255, 0.9)),
+    url("https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=1400&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
   border: 1px solid var(--af-border);
@@ -1271,7 +1494,7 @@ a {
   background: var(--af-white);
   border: 1px solid rgba(18, 40, 17, 0.14);
   border-radius: var(--af-radius-sm);
-  color: var(--af-green-dark);
+  color: var(--af-red);
   font-size: 0.78rem;
   font-weight: 800;
   padding: 0.45rem 0.7rem;
@@ -1279,7 +1502,7 @@ a {
 
 /* Buyer guide */
 .af-buyer-section {
-  background: var(--af-white);
+  background: #fff8e8;
   border-top: 1px solid var(--af-border);
   border-bottom: 1px solid var(--af-border);
 }
@@ -1299,7 +1522,7 @@ a {
   border: 1px solid var(--af-border);
   border-radius: var(--af-radius-lg);
   padding: 0;
-  background: var(--af-bg);
+  background: var(--af-white);
   overflow: hidden;
   box-shadow: var(--af-shadow-sm);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -1353,7 +1576,7 @@ a {
   bottom: 28px;
   right: 28px;
   z-index: 90;
-  background-color: var(--af-accent-gold);
+  background-color: var(--af-red);
   color: var(--af-white);
   border: none;
   border-radius: 999px;
@@ -1363,7 +1586,7 @@ a {
   gap: 0.75rem;
   font-size: 0.95rem;
   font-weight: 800;
-  box-shadow: 0 14px 32px rgba(184, 121, 24, 0.34);
+  box-shadow: 0 14px 32px rgba(184, 59, 39, 0.34);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1375,7 +1598,7 @@ a {
 
 .af-cart-fab-count {
   background: var(--af-white);
-  color: var(--af-accent-gold);
+  color: var(--af-red);
   width: 22px;
   height: 22px;
   border-radius: var(--af-radius-sm);
@@ -1408,7 +1631,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(18, 40, 17, 0.4);
+  background: rgba(52, 36, 20, 0.48);
   backdrop-filter: blur(4px);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1509,7 +1732,7 @@ a {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--af-green-sage);
+  color: var(--af-red);
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -1524,7 +1747,7 @@ a {
   font-family: var(--af-font-body);
   font-size: 0.95rem;
   margin-bottom: 1.25rem;
-  background: var(--af-green-light);
+  background: var(--af-cream);
   outline: none;
   transition: all 0.2s ease;
 }
@@ -1532,7 +1755,7 @@ a {
 .af-cart-overlay-form input:focus,
 .af-cart-overlay-form select:focus,
 .af-cart-overlay-form textarea:focus {
-  border-color: var(--af-green-sage);
+  border-color: var(--af-red);
   background: var(--af-white);
   box-shadow: 0 0 0 3px rgba(56, 90, 55, 0.1);
 }
@@ -1547,7 +1770,7 @@ a {
 
 /* Footer */
 .af-footer {
-  background-color: var(--af-green-dark);
+  background-color: var(--af-charcoal);
   color: var(--af-white);
   padding: 4rem 0 2.5rem;
   text-align: center;
@@ -1651,6 +1874,14 @@ a {
     max-width: 500px;
     margin: 0 auto;
   }
+  .af-hero-brand {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .af-featured-grid,
+  .af-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .af-about {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -1729,8 +1960,18 @@ a {
     font-size: 1.02rem;
   }
   .af-highlights-grid,
-  .af-buyer-grid {
+  .af-buyer-grid,
+  .af-featured-grid,
+  .af-catalog-grid,
+  .af-jigsaw-grid {
     grid-template-columns: 1fr;
+  }
+  .af-hero-logo-card {
+    grid-template-columns: 64px 1fr;
+  }
+  .af-hero-logo-card img {
+    width: 64px;
+    height: 64px;
   }
   .af-gallery-section {
     padding-bottom: 4rem;

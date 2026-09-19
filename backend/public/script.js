@@ -679,10 +679,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const topThree = normalized.slice(0, 3);
-    const rowsHtml = topThree.map((item) => {
+    const cardsHtml = topThree.map((item) => {
       const isSoldOut = item.is_sold_out;
       return `
-        <tr
+        <article
+          class="af-product-card"
           data-menu-item
           data-item-id="${item.id}"
           data-sold-out="${isSoldOut ? "1" : "0"}"
@@ -690,35 +691,23 @@ document.addEventListener("DOMContentLoaded", () => {
           data-stock-unit="${item.stock_unit || ""}"
           data-category="${item.categorySlug}"
         >
-          <td data-label="Product">
-            <div class="af-table-product">
-              ${item.imageUrl ? `
-                <div class="af-table-thumb">
-                  <img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" />
-                </div>
-              ` : ""}
-              <div class="af-table-product-info">
-                <h3>${item.name}</h3>
-                <p class="af-spec-text">${item.description}</p>
-              </div>
-            </div>
-          </td>
-          <td data-label="Category">
+          <div class="af-product-media">
+            <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
             <span class="af-spec-badge">${item.categoryName}</span>
-          </td>
-          <td data-label="Stock">
-            ${isSoldOut ? `
-              <span class="af-stock-pill af-stock-pill-empty">Out of Stock</span>
-            ` : `
-              <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
-            `}
-          </td>
-          <td data-label="Unit Price">
-            <span class="af-price">${formatMoney(item.price)}</span>
-          </td>
-          <td data-label="Action" style="text-align:right;">
+          </div>
+          <div class="af-product-body">
+            <h3>${item.name}</h3>
+            <p class="af-spec-text">${item.description}</p>
+            <div class="af-product-meta">
+              ${isSoldOut ? `
+                <span class="af-stock-pill af-stock-pill-empty">Out of Stock</span>
+              ` : `
+                <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
+              `}
+              <span class="af-price">${formatMoney(item.price)}</span>
+            </div>
             <button
-              class="af-btn af-btn-sm af-btn-primary"
+              class="af-btn af-btn-primary"
               data-item="${item.name}"
               data-item-id="${item.id}"
               data-item-price="${item.price}"
@@ -729,27 +718,12 @@ document.addEventListener("DOMContentLoaded", () => {
             >
               ${isSoldOut ? "Out of Stock" : "Add to Inquiry"}
             </button>
-          </td>
-        </tr>
+          </div>
+        </article>
       `;
     }).join("");
 
-    dom.featuredGrid.innerHTML = `
-      <table class="af-stock-table">
-        <thead>
-          <tr>
-            <th style="width:40%">Product</th>
-            <th>Category</th>
-            <th>Stock</th>
-            <th>Unit Price</th>
-            <th style="text-align:right;">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${rowsHtml}
-        </tbody>
-      </table>
-    `;
+    dom.featuredGrid.innerHTML = cardsHtml;
 
     bindAddToCartButtons();
     applyOrderAvailability();
@@ -758,44 +732,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const createMenuCard = (rawItem) => {
     const item = normalizeItem(rawItem);
     const soldOut = item.is_sold_out ? "1" : "0";
-    const row = document.createElement("tr");
-    row.className = "af-menu-item";
-    row.setAttribute("data-menu-item", "");
-    row.setAttribute("data-item-id", item.id);
-    row.setAttribute("data-sold-out", soldOut);
-    row.setAttribute("data-stock", item.stock ?? "");
-    row.setAttribute("data-stock-unit", item.stock_unit || "");
-    row.setAttribute("data-category", item.categorySlug);
-    row.innerHTML = `
-      <td data-label="Product">
-        <div class="af-table-product">
-          ${item.imageUrl ? `
-            <div class="af-table-thumb">
-              <img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" />
-            </div>
-          ` : ""}
-          <div class="af-table-product-info">
-            <h3>${item.name}</h3>
-            <p class="af-spec-text">${item.description}</p>
-          </div>
-        </div>
-      </td>
-      <td data-label="Category">
+    const card = document.createElement("article");
+    card.className = "af-product-card af-menu-item";
+    card.setAttribute("data-menu-item", "");
+    card.setAttribute("data-item-id", item.id);
+    card.setAttribute("data-sold-out", soldOut);
+    card.setAttribute("data-stock", item.stock ?? "");
+    card.setAttribute("data-stock-unit", item.stock_unit || "");
+    card.setAttribute("data-category", item.categorySlug);
+    card.innerHTML = `
+      <div class="af-product-media">
+        <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
         <span class="af-spec-badge">${item.categoryName}</span>
-      </td>
-      <td data-label="Availability">
-        ${item.is_sold_out ? `
-          <span class="af-stock-pill af-stock-pill-empty" data-stock-pill>Out of Stock</span>
-        ` : `
-          <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
-        `}
-      </td>
-      <td data-label="Unit Price">
-        <span class="af-price">${formatMoney(item.price)}</span>
-      </td>
-      <td data-label="Inquiry" style="text-align:right;">
+      </div>
+      <div class="af-product-body">
+        <h3>${item.name}</h3>
+        <p class="af-spec-text">${item.description}</p>
+        <div class="af-product-meta">
+          ${item.is_sold_out ? `
+            <span class="af-stock-pill af-stock-pill-empty" data-stock-pill>Out of Stock</span>
+          ` : `
+            <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
+          `}
+          <span class="af-price">${formatMoney(item.price)}</span>
+        </div>
         <button
-          class="af-btn af-btn-sm af-btn-outline"
+          class="af-btn af-btn-outline"
           data-item="${item.name}"
           data-item-id="${item.id}"
           data-item-price="${item.price}"
@@ -806,9 +768,9 @@ document.addEventListener("DOMContentLoaded", () => {
         >
           ${item.is_sold_out ? "Out of Stock" : "Add to Inquiry"}
         </button>
-      </td>
+      </div>
     `;
-    return row;
+    return card;
   };
 
   const renderMenuError = (message) => {
@@ -830,11 +792,11 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const rowsHtml = normalized.map((item) => {
+    const cardsHtml = normalized.map((item) => {
       const isSoldOut = item.is_sold_out;
       return `
-        <tr
-          class="af-menu-item"
+        <article
+          class="af-product-card af-menu-item"
           data-menu-item
           data-item-id="${item.id}"
           data-sold-out="${isSoldOut ? "1" : "0"}"
@@ -842,35 +804,23 @@ document.addEventListener("DOMContentLoaded", () => {
           data-stock-unit="${item.stock_unit || ""}"
           data-category="${item.categorySlug}"
         >
-          <td data-label="Product">
-            <div class="af-table-product">
-              ${item.imageUrl ? `
-                <div class="af-table-thumb">
-                  <img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" />
-                </div>
-              ` : ""}
-              <div class="af-table-product-info">
-                <h3>${item.name}</h3>
-                <p class="af-spec-text">${item.description}</p>
-              </div>
-            </div>
-          </td>
-          <td data-label="Category">
+          <div class="af-product-media">
+            <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
             <span class="af-spec-badge">${item.categoryName}</span>
-          </td>
-          <td data-label="Availability">
-            ${isSoldOut ? `
-              <span class="af-stock-pill af-stock-pill-empty" data-stock-pill>Out of Stock</span>
-            ` : `
-              <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
-            `}
-          </td>
-          <td data-label="Unit Price">
-            <span class="af-price">${formatMoney(item.price)}</span>
-          </td>
-          <td data-label="Inquiry" style="text-align:right;">
+          </div>
+          <div class="af-product-body">
+            <h3>${item.name}</h3>
+            <p class="af-spec-text">${item.description}</p>
+            <div class="af-product-meta">
+              ${isSoldOut ? `
+                <span class="af-stock-pill af-stock-pill-empty" data-stock-pill>Out of Stock</span>
+              ` : `
+                <span class="af-stock-pill" data-stock-pill>${item.stockLabel || "In Stock"}</span>
+              `}
+              <span class="af-price">${formatMoney(item.price)}</span>
+            </div>
             <button
-              class="af-btn af-btn-sm af-btn-outline"
+              class="af-btn af-btn-outline"
               data-item="${item.name}"
               data-item-id="${item.id}"
               data-item-price="${item.price}"
@@ -881,27 +831,12 @@ document.addEventListener("DOMContentLoaded", () => {
             >
               ${isSoldOut ? "Out of Stock" : "Add to Inquiry"}
             </button>
-          </td>
-        </tr>
+          </div>
+        </article>
       `;
     }).join("");
 
-    dom.menuGrid.innerHTML = `
-      <table class="af-stock-table">
-        <thead>
-          <tr>
-            <th style="width:38%">Product & Description</th>
-            <th>Processing Type</th>
-            <th>Availability</th>
-            <th>Unit Price</th>
-            <th style="text-align:right;">Inquiry</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${rowsHtml}
-        </tbody>
-      </table>
-    `;
+    dom.menuGrid.innerHTML = cardsHtml;
 
     bindAddToCartButtons();
     applyFilter();
@@ -943,12 +878,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else if (dom.menuGrid) {
       const card = createMenuCard(item);
-      const tbody = dom.menuGrid.querySelector("tbody");
-      if (tbody) {
-        tbody.appendChild(card);
-      } else {
-        dom.menuGrid.appendChild(card);
-      }
+      dom.menuGrid.appendChild(card);
       ensureCategoryChip(item.categoryName);
       bindAddToCartButtons();
       applyOrderAvailability();

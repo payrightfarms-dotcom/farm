@@ -5,22 +5,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Payright Farms - Premium Poultry Farm, Processing & Distribution</title>
-  <meta name="description" content="Payright Farms is a premium poultry farm, processing, feed, eggs, and chicken distribution company supplying households, retailers, restaurants, and wholesale buyers." />
-  <meta name="keywords" content="premium poultry farm, chicken processing, live broilers, dressed chicken, wholesale chicken, eggs, poultry feed, Payright Farms" />
+  <title>Payright Farms - Feed, Processing, Chicken & Egg Sales</title>
+  <meta name="description" content="Payright Farms integrates poultry feed sales, chicken processing, chicken sales, and egg sales so customers get the right product at the right price." />
+  <meta name="keywords" content="Payright Farms, poultry feed sales, chicken processing, whole chicken, chicken parts, egg sales, poultry farm" />
   <meta name="author" content="Payright Farms" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.payrightfarms.com/" />
-  <meta property="og:title" content="Payright Farms - Premium Poultry Farm, Processing & Distribution" />
-  <meta property="og:description" content="Healthy birds, hygienic processing, eggs, feed, fresh chicken, frozen supply, and dependable wholesale poultry distribution." />
+  <meta property="og:title" content="Payright Farms - Feed, Processing, Chicken & Egg Sales" />
+  <meta property="og:description" content="Four integrated poultry businesses: feed sales, chicken processing, chicken sales, and egg sales." />
   <meta property="og:image" content="{{ asset('assets/logo2.png') }}" />
   <link rel="canonical" href="https://www.payrightfarms.com/" />
   <link rel="icon" href="{{ asset('assets/logo2.png') }}" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=19" />
+  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=20" />
 </head>
 <body>
 
@@ -36,11 +36,12 @@
 
       <nav class="af-nav">
         <a href="#home">Home</a>
-        <a href="#standards">Standards</a>
-        <a href="#process">Process</a>
+        <a href="#businesses">Businesses</a>
+        <a href="#standards">Processing</a>
         <a href="#inventory">Products</a>
+        <a href="#about">Mission</a>
         <a href="#contact">Contact</a>
-        <a href="#booking" class="af-btn af-btn-sm af-btn-outline" style="margin-left: 0.5rem;">Request Supply</a>
+        <a href="#booking" class="af-btn af-btn-sm af-btn-outline" style="margin-left: 0.5rem;">Order Inquiry</a>
       </nav>
 
       <button class="af-nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
@@ -51,11 +52,11 @@
     {{-- ================ HERO ================ --}}
     <section id="home" class="af-hero">
 
-      {{-- Full-bleed chicken farm background image --}}
+      {{-- Full-bleed poultry farm background image --}}
       <div class="af-hero-bg" aria-hidden="true">
         <img
-          src="https://d1xchyov513y0i.cloudfront.net/wp-content/uploads/2024/01/31194844/16_5132_02_N81_webmd-800x534.jpg"
-          alt="Large modern poultry processing factory with stainless steel conveyor equipment"
+          src="https://encyclopediaofalabama.org/wp-content/uploads/2023/04/Broiler-Chicken-House-1.jpg"
+          alt="Broiler chickens inside a clean poultry house"
           loading="eager"
           decoding="async"
           fetchpriority="high"
@@ -69,54 +70,85 @@
       {{-- Hero content --}}
       <div class="af-hero-inner">
         <div class="af-hero-content">
-          <p class="af-kicker">Premium poultry supply</p>
-          <h1>Professional poultry farming, processing, and dependable distribution.</h1>
+          <p class="af-kicker">Right Product · Right Price · Right Choice</p>
+          <h1>Four connected poultry businesses. One reliable farm choice.</h1>
           <p class="af-lead">
-            Payright Farms supplies healthy birds, fresh eggs, trusted poultry feed, dressed chicken, portioned cuts, and frozen stock for households, food businesses, retailers, and wholesale buyers.
+            Payright Farms brings feed sales, chicken processing, chicken sales, and egg sales together so households, kitchens, retailers, and bulk buyers can source with confidence.
           </p>
           <div class="af-hero-actions">
-            <a href="#inventory" class="af-btn af-btn-primary">View Products</a>
-            <a href="#booking" class="af-btn af-btn-ghost">Request Supply</a>
+            <a href="#inventory" class="af-btn af-btn-primary">Shop Farm Products</a>
+            <a href="#businesses" class="af-btn af-btn-ghost">Explore the 4 Pieces</a>
           </div>
 
           <div class="af-hero-metrics">
             <div>
-              <strong>Fresh Chicken</strong>
-              <span>Live, dressed, cut, and frozen</span>
+              <strong>Feed</strong>
+              <span>Breedwell, Olam & Chikun</span>
             </div>
             <div>
-              <strong>Farm Standards</strong>
-              <span>Clean handling and controlled workflow</span>
+              <strong>Processing</strong>
+              <span>Clean dressing and portioning</span>
             </div>
             <div>
-              <strong>Bulk Supply</strong>
-              <span>Retail, kitchen, and wholesale orders</span>
+              <strong>Chicken & Eggs</strong>
+              <span>Bulk, retail, whole, and parts</span>
             </div>
           </div>
 
           <div class="af-floating-note">
-            <span>Operations Schedule</span>
-            <strong data-business-hours-summary>Mon-Sat 8am - 10pm</strong>
-            <small><span data-business-hours-sunday>Sun 12noon - 10pm</span> · Farm gate pickup · Delivery · Wholesale contracts</small>
+            <span>Mission</span>
+            <strong>Pay the right price for the right product.</strong>
+            <small>That is how we become your right choice.</small>
           </div>
         </div>
+        <aside class="af-hero-brand" aria-label="Payright Farms integrated business model">
+          <div class="af-hero-logo-card">
+            <img src="{{ asset('assets/logo.png') }}" alt="Payright Farms Logo" />
+            <div>
+              <span>4-piece identity</span>
+              <strong>The logo represents our integrated poultry businesses.</strong>
+            </div>
+          </div>
+          <div class="af-jigsaw-grid">
+            <div class="af-jigsaw-piece af-piece-feed">
+              <span>01</span>
+              <strong>Feed Sales</strong>
+              <small>Trusted poultry feed brands for every growth stage.</small>
+            </div>
+            <div class="af-jigsaw-piece af-piece-processing">
+              <span>02</span>
+              <strong>Chicken Processing</strong>
+              <small>Clean slaughter-house workflow and portioning.</small>
+            </div>
+            <div class="af-jigsaw-piece af-piece-chicken">
+              <span>03</span>
+              <strong>Chicken Sales</strong>
+              <small>Whole chicken, live birds, frozen stock, and parts.</small>
+            </div>
+            <div class="af-jigsaw-piece af-piece-eggs">
+              <span>04</span>
+              <strong>Egg Sales</strong>
+              <small>Fresh crates for bulk and retail buyers.</small>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
     {{-- ================ HIGHLIGHTS (4 INTEGRATED BUSINESS PILLARS) ================ --}}
-    <section class="af-highlights-section">
+    <section class="af-highlights-section" id="businesses">
       <div class="af-container">
         <div class="af-highlights-grid">
           @php
             $highlights = [
-              ['icon' => '01', 'label' => 'Poultry Feed', 'sub' => 'Breedwell, Olam & Chikun poultry feeds'],
-              ['icon' => '02', 'label' => 'Chicken Processing', 'sub' => 'Clean slaughter-house dressing and portioning'],
-              ['icon' => '03', 'label' => 'Chicken Supply', 'sub' => 'Live birds, whole chicken, and cut parts'],
-              ['icon' => '04', 'label' => 'Egg Sales', 'sub' => 'Fresh crates for households and bulk buyers'],
+              ['class' => 'af-piece-feed', 'icon' => '01', 'label' => 'Feed Sales', 'sub' => 'Breedwell, Olam & Chikun poultry feeds'],
+              ['class' => 'af-piece-processing', 'icon' => '02', 'label' => 'Chicken Processing', 'sub' => 'Clean slaughter-house dressing and portioning'],
+              ['class' => 'af-piece-chicken', 'icon' => '03', 'label' => 'Chicken Sales', 'sub' => 'Whole chicken, live birds, frozen stock and parts'],
+              ['class' => 'af-piece-eggs', 'icon' => '04', 'label' => 'Egg Sales', 'sub' => 'Fresh crates for bulk and retail buyers'],
             ];
           @endphp
           @foreach($highlights as $h)
-            <div class="af-highlight-card">
+            <div class="af-highlight-card {{ $h['class'] }}">
               <span class="af-highlight-icon">{{ $h['icon'] }}</span>
               <div class="af-highlight-info">
                 <strong>{{ $h['label'] }}</strong>
@@ -133,9 +165,9 @@
       <div class="af-container af-process">
         <div class="af-process-copy">
           <p class="af-kicker">What We Stand For</p>
-          <h2>Premium poultry starts long before the product reaches the buyer.</h2>
+          <h2>Clean processing, practical standards, and honest farm supply.</h2>
           <p>
-            We built Payright Farms for buyers who need confidence in bird health, processing hygiene, weight consistency, cold handling, and timely supply. Every order is handled with the same practical discipline, whether it is a household purchase or a planned wholesale request.
+            The processing arm of Payright Farms gives buyers more than a price list. It gives them confidence in handling, hygiene, portioning, cold preparation, and communication before products leave the farm.
           </p>
           <div class="af-process-video-card">
             <video
@@ -176,25 +208,25 @@
     <section class="af-section af-supply-section" id="process">
       <div class="af-container">
         <div class="af-section-head">
-          <p class="af-kicker">Supply Process</p>
-          <h2>From farm request to confirmed dispatch.</h2>
-          <p>Simple, transparent order handling for buyers who care about quality, timing, and predictable pricing.</p>
+          <p class="af-kicker">How Orders Move</p>
+          <h2>From product choice to pickup or delivery.</h2>
+          <p>Simple order handling for buyers who care about clear pricing, available stock, processing notes, and timing.</p>
         </div>
         <div class="af-supply-grid">
           <div class="af-supply-step">
             <span>01</span>
-            <strong>Confirm Product Format</strong>
-            <p>Choose live birds, dressed whole chicken, cut parts, frozen stock, eggs, or poultry feed.</p>
+            <strong>Choose the Business Line</strong>
+            <p>Select feed, processing, chicken products, or eggs from the live public catalog.</p>
           </div>
           <div class="af-supply-step">
             <span>02</span>
-            <strong>Agree Quantity & Timing</strong>
-            <p>We confirm availability, preferred collection or delivery date, and any processing notes.</p>
+            <strong>Confirm Quantity & Timing</strong>
+            <p>We confirm price, availability, pickup or delivery preference, and any processing notes.</p>
           </div>
           <div class="af-supply-step">
             <span>03</span>
-            <strong>Prepare & Dispatch</strong>
-            <p>Your order is processed, packed, priced clearly, and released for farm-gate pickup or delivery.</p>
+            <strong>Prepare the Order</strong>
+            <p>Your order is packed or processed, then released for farm-gate pickup or delivery.</p>
           </div>
         </div>
       </div>
@@ -244,24 +276,13 @@
       <div class="af-container">
         <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
           <div>
-            <p class="af-kicker">Featured Products</p>
-            <h2 style="font-size:2rem; margin:0;">Popular poultry and farm products</h2>
+            <p class="af-kicker">Featured Farm Products</p>
+            <h2 style="font-size:2rem; margin:0;">Fast-moving items from the farm catalog</h2>
           </div>
           <a href="#inventory" class="af-btn af-btn-ghost af-btn-sm">View Full Product List</a>
         </div>
 
-        <div class="af-stock-table-wrapper" id="featuredGrid">
-          <table class="af-stock-table">
-            <thead>
-              <tr>
-                <th style="width:40%">Product</th>
-                <th>Category</th>
-                <th>Stock</th>
-                <th>Unit Price</th>
-                <th style="text-align:right;">Action</th>
-              </tr>
-            </thead>
-            <tbody>
+        <div class="af-product-grid af-featured-grid" id="featuredGrid">
               @forelse ($featured as $item)
                 @php
                   $isSoldOut = $item->is_sold_out || $item->stock === 0;
@@ -272,7 +293,8 @@
                       ? $item->stock.' '.($item->stock == 1 ? rtrim($stockUnit, 's') : (Str::endsWith($stockUnit, 's') ? $stockUnit : $stockUnit.'s')).' available'
                       : $item->stock.' available');
                 @endphp
-                <tr
+                <article
+                  class="af-product-card"
                   data-menu-item
                   data-item-id="{{ $item->id }}"
                   data-sold-out="{{ $isSoldOut ? '1' : '0' }}"
@@ -280,35 +302,27 @@
                   data-stock-unit="{{ $item->stock_unit ?? '' }}"
                   data-category="{{ Str::slug(optional($item->category)->name ?? 'general') }}"
                 >
-                  <td data-label="Product">
-                    <div class="af-table-product">
+                  <div class="af-product-media">
                       @if($item->image_url)
-                        <div class="af-table-thumb">
-                          <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                        </div>
+                        <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
+                      @else
+                        <img src="https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop" alt="{{ $item->name }}" loading="lazy" decoding="async" />
                       @endif
-                      <div class="af-table-product-info">
-                        <h3>{{ $item->name }}</h3>
-                        <p class="af-spec-text">{{ Str::limit($item->description, 80) }}</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td data-label="Category">
                     <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
-                  </td>
-                  <td data-label="Stock">
+                  </div>
+                  <div class="af-product-body">
+                    <h3>{{ $item->name }}</h3>
+                    <p class="af-spec-text">{{ Str::limit($item->description, 105) }}</p>
+                    <div class="af-product-meta">
                     @if($isSoldOut)
                       <span class="af-stock-pill af-stock-pill-empty">Out of Stock</span>
                     @else
                       <span class="af-stock-pill" data-stock-pill>{{ $stockLabel }}</span>
                     @endif
-                  </td>
-                  <td data-label="Unit Price">
                     <span class="af-price">₦{{ number_format($item->price, 0) }}</span>
-                  </td>
-                  <td data-label="Action" style="text-align:right;">
+                    </div>
                     <button
-                      class="af-btn af-btn-sm af-btn-primary"
+                      class="af-btn af-btn-primary"
                       data-item="{{ $item->name }}"
                       data-item-id="{{ $item->id }}"
                       data-item-price="{{ $item->price }}"
@@ -319,25 +333,23 @@
                     >
                       {{ $isSoldOut ? 'Out of Stock' : 'Add to Inquiry' }}
                     </button>
-                  </td>
-                </tr>
+                  </div>
+                </article>
               @empty
-                <tr><td colspan="5" style="text-align:center; padding:3rem; color:var(--af-ink-soft);">No featured products at this time.</td></tr>
+                <p class="af-empty-state">No featured products at this time.</p>
               @endforelse
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
 
-    {{-- ================ FULL STOCK SHEET ================ --}}
+    {{-- ================ FULL PRODUCT CATALOG ================ --}}
     <section class="af-section af-section-alt" id="inventory">
       <div class="af-container">
         <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
           <div>
-            <p class="af-kicker">Products & Availability</p>
-            <h2 style="font-size:2rem; margin:0;">Current poultry supply list</h2>
-            <p style="margin-top:0.5rem; margin-bottom:0;">Live availability, processing format, and farm-gate pricing for direct inquiries.</p>
+            <p class="af-kicker">Farm Catalog</p>
+            <h2 style="font-size:2rem; margin:0;">Choose from our four integrated businesses</h2>
+            <p style="margin-top:0.5rem; margin-bottom:0;">Feed, processed chicken, whole chicken and parts, and fresh eggs with live availability from the backend.</p>
           </div>
         </div>
 
@@ -349,18 +361,7 @@
             @endforeach
           </div>
 
-          <div class="af-stock-table-wrapper" id="menuGrid">
-            <table class="af-stock-table">
-              <thead>
-                <tr>
-                  <th style="width:38%">Product & Description</th>
-                  <th>Processing Type</th>
-                  <th>Availability</th>
-                  <th>Unit Price</th>
-                  <th style="text-align:right;">Inquiry</th>
-                </tr>
-              </thead>
-              <tbody>
+          <div class="af-product-grid af-catalog-grid" id="menuGrid">
                 @forelse ($menuItems as $item)
                   @php
                     $catSlug = Str::slug(optional($item->category)->name ?? 'general');
@@ -372,8 +373,8 @@
                         ? $item->stock.' '.($item->stock == 1 ? rtrim($stockUnit, 's') : (Str::endsWith($stockUnit, 's') ? $stockUnit : $stockUnit.'s')).' available'
                         : $item->stock.' available');
                   @endphp
-                  <tr
-                    class="af-menu-item"
+                  <article
+                    class="af-product-card af-menu-item"
                     data-menu-item
                     data-item-id="{{ $item->id }}"
                     data-sold-out="{{ $isSoldOut ? '1' : '0' }}"
@@ -381,35 +382,27 @@
                     data-stock-unit="{{ $item->stock_unit ?? '' }}"
                     data-category="{{ $catSlug }}"
                   >
-                    <td data-label="Product">
-                      <div class="af-table-product">
+                    <div class="af-product-media">
                         @if($item->image_url)
-                          <div class="af-table-thumb">
-                            <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                          </div>
+                          <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
+                        @else
+                          <img src="https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop" alt="{{ $item->name }}" loading="lazy" decoding="async" />
                         @endif
-                        <div class="af-table-product-info">
-                          <h3>{{ $item->name }}</h3>
-                          <p class="af-spec-text">{{ Str::limit($item->description, 90) }}</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td data-label="Category">
                       <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
-                    </td>
-                    <td data-label="Availability">
+                    </div>
+                    <div class="af-product-body">
+                      <h3>{{ $item->name }}</h3>
+                      <p class="af-spec-text">{{ Str::limit($item->description, 105) }}</p>
+                      <div class="af-product-meta">
                       @if($isSoldOut)
                         <span class="af-stock-pill af-stock-pill-empty" data-stock-pill>Out of Stock</span>
                       @else
                         <span class="af-stock-pill" data-stock-pill>{{ $stockLabel }}</span>
                       @endif
-                    </td>
-                    <td data-label="Unit Price">
                       <span class="af-price">₦{{ number_format($item->price, 0) }}</span>
-                    </td>
-                    <td data-label="Inquiry" style="text-align:right;">
+                      </div>
                       <button
-                        class="af-btn af-btn-sm af-btn-outline"
+                        class="af-btn af-btn-outline"
                         data-item="{{ $item->name }}"
                         data-item-id="{{ $item->id }}"
                         data-item-price="{{ $item->price }}"
@@ -420,13 +413,11 @@
                       >
                         {{ $isSoldOut ? 'Out of Stock' : 'Add to Inquiry' }}
                       </button>
-                    </td>
-                  </tr>
+                    </div>
+                  </article>
                 @empty
-                  <tr><td colspan="5" style="text-align:center; padding:3rem; color:var(--af-ink-soft);">No inventory available at this time.</td></tr>
+                  <p class="af-empty-state">No inventory available at this time.</p>
                 @endforelse
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -437,13 +428,13 @@
       <div class="af-container af-order-placeholder">
         <div class="af-order-prompt">
           <p class="af-kicker">Booking Sheet</p>
-          <h2>Request poultry supply with the details we need.</h2>
-          <p style="max-width:560px; margin:0 auto 2rem;">Add products to your booking sheet, then send your contact name, quantity, pickup or delivery choice, preferred date, and any cut-size or packaging notes.</p>
+          <h2>Build your order inquiry from the farm catalog.</h2>
+          <p style="max-width:560px; margin:0 auto 2rem;">Add products from any of the four business lines, then send your quantity, pickup or delivery choice, preferred date, and processing notes.</p>
           <div class="af-order-checks" aria-label="Inquiry details">
+            <span>Feed brand</span>
             <span>Quantity</span>
             <span>Pickup or delivery</span>
             <span>Fresh or frozen</span>
-            <span>Custom cuts</span>
           </div>
           <button class="af-btn af-btn-primary" type="button" id="orderPromptBtn" style="min-width: 220px;">Open Booking Sheet</button>
         </div>
@@ -458,22 +449,21 @@
             <p class="af-kicker">About Payright Farms</p>
             <span class="af-about-badge">Guided by grace</span>
           </div>
-          <h2>A poultry brand built on quality, hygiene, value, and trust.</h2>
+          <h2>Right Product, Right Price, Right Choice.</h2>
           <p>
-            Payright Farms is a modern poultry operation covering rearing, poultry feed sales, egg sales, live bird supply, slaughter-house processing, and distribution to retail and wholesale buyers. We identified a gap in the local market for affordable, hygienically processed chicken and built a facility to close it.
+            Payright Farms is built around four integrated poultry businesses: feed sales, chicken processing, chicken sales, and egg sales. The idea is simple: customers should not have to guess where to get dependable poultry products at fair value.
           </p>
           <div class="af-mission-card">
             <p>"To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice."</p>
           </div>
           <p>
-            Our birds are raised with attention to feed, water, ventilation, stocking density, and handling. At the slaughter house, products move through a clean workflow into chilled storage or dispatch. We supply fresh and blast-frozen products to households, restaurants, food vendors, retailers, and commercial buyers.
+            Our mission is to ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice. That mission guides the way we communicate prices, prepare orders, process chicken, and serve bulk and retail buyers.
           </p>
           <div class="af-about-pills">
-            <span>Live Bird Supply</span>
-            <span>On-site Processing</span>
-            <span>Eggs & Poultry Feed</span>
-            <span>Retail & Wholesale</span>
-            <span>Farm Gate Pickup</span>
+            <span>Feed Sales</span>
+            <span>Chicken Processing</span>
+            <span>Chicken Sales</span>
+            <span>Egg Sales</span>
           </div>
           <div class="af-about-signoff">
             <span class="af-script">With gratitude,</span>
@@ -492,27 +482,27 @@
           </div>
           <div class="af-about-card">
             <span class="af-about-pill">Our Operating Standards</span>
-            <p>Every product leaving the farm is handled with clear standards and practical accountability.</p>
+            <p>The four-piece logo is not decoration. It is the operating model of the farm.</p>
             <ul class="af-about-checklist">
-              <li>Birds checked for size, activity, and general health before dispatch.</li>
-              <li>Clean processing workflow from slaughter to rinsing and packaging.</li>
-              <li>Chilled handling from processing to pickup or delivery.</li>
-              <li>Wholesale contracts with volume planning and clear price updates.</li>
-              <li>Clear communication on price, quantity, timing, and buyer requirements.</li>
+              <li>Feed sales support healthy poultry growth and predictable production.</li>
+              <li>Chicken processing turns live supply into clean, ready-to-use products.</li>
+              <li>Chicken sales cover whole chicken, live birds, parts, and frozen supply.</li>
+              <li>Egg sales serve both bulk and retail customers.</li>
+              <li>Every arm supports the motto: Right Product, Right Price, Right Choice.</li>
             </ul>
           </div>
           <div class="af-about-stats">
             <div>
-              <strong>Fresh</strong>
-              <span>Daily preparation</span>
+              <strong>4</strong>
+              <span>Integrated businesses</span>
             </div>
             <div>
-              <strong>B2B</strong>
+              <strong>Bulk</strong>
               <span>Wholesale supply</span>
             </div>
             <div>
               <strong>Retail</strong>
-              <span>Direct buyers</span>
+              <span>Daily buyers</span>
             </div>
           </div>
         </div>
@@ -524,7 +514,7 @@
       <div class="af-container">
         <div class="af-buyer-head">
           <p class="af-kicker">Buyer Guide</p>
-          <h2>Choose the supply format that fits your household, kitchen, or business.</h2>
+          <h2>Choose the product line that fits your household, kitchen, or business.</h2>
         </div>
         <div class="af-buyer-grid">
           <div class="af-buyer-card">
@@ -535,8 +525,8 @@
               decoding="async"
               onerror="this.hidden=true"
             />
-            <strong>Live Birds</strong>
-            <p>Best for buyers who want to handle slaughter themselves or inspect birds before purchase.</p>
+            <strong>Chicken Sales</strong>
+            <p>Whole chicken, parts, live birds, fresh supply, and frozen options for retail and bulk buyers.</p>
           </div>
           <div class="af-buyer-card">
             <img
@@ -546,8 +536,8 @@
               decoding="async"
               onerror="this.hidden=true"
             />
-            <strong>Dressed Whole Chicken</strong>
-            <p>Best for households, restaurants, and retailers that need clean, ready-to-cook birds.</p>
+            <strong>Chicken Processing</strong>
+            <p>Clean slaughter-house handling, dressing, portioning, and preparation for food businesses.</p>
           </div>
           <div class="af-buyer-card">
             <img
@@ -557,8 +547,8 @@
               decoding="async"
               onerror="this.hidden=true"
             />
-            <strong>Cut Parts</strong>
-            <p>Best for food vendors and kitchens that need wings, laps, breast, gizzard, or mixed portions.</p>
+            <strong>Feed Sales</strong>
+            <p>Breedwell, Olam, and Chikun feed options for broilers, layers, growers, and starters.</p>
           </div>
           <div class="af-buyer-card">
             <img
@@ -568,8 +558,8 @@
               decoding="async"
               onerror="this.hidden=true"
             />
-            <strong>Frozen Supply</strong>
-            <p>Best for buyers managing stock over several days with planned storage and dispatch.</p>
+            <strong>Egg Sales</strong>
+            <p>Fresh eggs in crates for households, stores, restaurants, and bulk retail orders.</p>
           </div>
         </div>
       </div>
@@ -581,7 +571,7 @@
         <div class="af-contact-card">
           <p class="af-kicker">Get in Touch</p>
           <h2>Procurement & Distribution Inquiries</h2>
-          <p>Contact us directly for live bird pricing, eggs, poultry feed, volume orders, custom processing requests, or distribution contracts.</p>
+          <p>Contact us directly for feed pricing, chicken processing, whole chicken and parts, eggs, volume orders, or supply contracts.</p>
           <div class="af-contact-grid">
             <div>
               <strong>Phone / WhatsApp</strong>
@@ -706,11 +696,11 @@
         </p>
       </div>
       <div class="af-footer-bottom">
-        <span>© <span id="year"></span> Payright Farms · Premium Poultry Farm, Processing & Distribution</span>
+        <span>© <span id="year"></span> Payright Farms · Right Product · Right Price · Right Choice</span>
       </div>
     </div>
   </footer>
 
-  <script src="{{ asset('script.js') }}?v=39" defer></script>
+  <script src="{{ asset('script.js') }}?v=40" defer></script>
 </body>
 </html>
