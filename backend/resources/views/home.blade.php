@@ -254,8 +254,8 @@
             <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
           </video>
           <figcaption>
-            <strong>Clean Processing</strong>
-            <span>Careful poultry handling from preparation to dispatch.</span>
+            <strong>Grow-Out Housing</strong>
+            <span>Young birds monitored for feed, water, space, and healthy development.</span>
           </figcaption>
         </figure>
         <figure>
