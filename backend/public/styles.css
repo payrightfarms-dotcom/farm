@@ -612,7 +612,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 4rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .af-process-copy {
@@ -750,9 +750,14 @@ a {
 .af-process-grid {
   display: grid;
   gap: 1rem;
+  height: 100%;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .af-process-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--af-white);
   border: 1px solid var(--af-border);
   border-left: 4px solid var(--af-green-sage);
@@ -1916,6 +1921,13 @@ a {
   .af-process {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .af-process-grid {
+    height: auto;
+    grid-template-rows: none;
+  }
+  .af-process-step {
+    justify-content: flex-start;
   }
   .af-process-copy {
     position: static;
