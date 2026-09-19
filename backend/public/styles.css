@@ -1,26 +1,28 @@
-/* 
-  Payright Farms - Modern Agribusiness Inventory & Price Sheet Styles
-  Forest Green, Slate, and Gold accents - Professional B2B/B2C Farm Catalog
+/*
+  Payright Farms - Premium public poultry brand system
+  Professional agribusiness presentation with inquiry and stock controls
 */
 
 :root {
-  --af-green-dark: #112414;
-  --af-green-sage: #3f6843;
-  --af-green-light: #eef6ec;
-  --af-accent-gold: #bd7d12;
-  --af-accent-gold-light: #fff7df;
-  --af-clay: #8f3f20;
-  --af-cold: #dff3f1;
-  --af-ink: #1c221b;
-  --af-ink-soft: #4a5449;
+  --af-green-dark: #102018;
+  --af-green-sage: #466b4f;
+  --af-green-light: #edf4ed;
+  --af-accent-gold: #b87918;
+  --af-accent-gold-light: #fff5df;
+  --af-clay: #8d4931;
+  --af-cold: #e7f2f4;
+  --af-ink: #1d241f;
+  --af-ink-soft: #5a625d;
+  --af-charcoal: #151817;
+  --af-cream: #fbfaf5;
   --af-white: #ffffff;
-  --af-bg: #f9fbf8;
-  --af-border: #e2e8e1;
+  --af-bg: #f7f8f3;
+  --af-border: #dde4dc;
   --af-line: rgba(56, 90, 55, 0.12);
   
-  --af-shadow-sm: none;
-  --af-shadow-md: none;
-  --af-shadow-lg: none;
+  --af-shadow-sm: 0 8px 24px rgba(20, 32, 24, 0.06);
+  --af-shadow-md: 0 16px 42px rgba(20, 32, 24, 0.09);
+  --af-shadow-lg: 0 24px 70px rgba(20, 32, 24, 0.12);
   
   --af-radius-lg: 8px;
   --af-radius-md: 8px;
@@ -71,7 +73,7 @@ a {
 }
 
 .af-section {
-  padding: 6rem 0;
+  padding: 6.5rem 0;
 }
 
 .af-section-alt {
@@ -81,11 +83,11 @@ a {
 }
 
 .af-kicker {
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.78rem;
   font-weight: 800;
-  color: var(--af-green-sage);
+  color: var(--af-clay);
   margin-bottom: 0.75rem;
   display: inline-flex;
   align-items: center;
@@ -112,7 +114,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(251, 250, 245, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--af-border);
   transition: all 0.3s ease;
@@ -124,7 +126,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 0;
+  padding: 0.85rem 0;
 }
 
 .af-logo-wrap {
@@ -143,7 +145,7 @@ a {
   font-weight: 800;
   font-size: 1.3rem;
   color: var(--af-green-dark);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .af-logo-tagline {
@@ -162,7 +164,7 @@ a {
 
 .af-nav a {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--af-ink-soft);
   transition: color 0.25s ease;
 }
@@ -209,9 +211,9 @@ a {
 
 /* highlights strip */
 .af-highlights-section {
-  background: var(--af-white);
+  background: var(--af-cream);
   border-bottom: 1px solid var(--af-border);
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
 }
 
 .af-highlights-grid {
@@ -225,7 +227,7 @@ a {
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  background: var(--af-bg);
+  background: var(--af-white);
   border: 1px solid var(--af-border);
   border-radius: var(--af-radius-md);
   transition: all 0.25s ease;
@@ -244,7 +246,7 @@ a {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  border-radius: 50%;
+  border-radius: var(--af-radius-sm);
   background: var(--af-green-dark);
   color: var(--af-white);
   font-size: 0.75rem;
@@ -267,12 +269,12 @@ a {
 /* Hero Section - Full Background */
 .af-hero {
   position: relative;
-  min-height: 86vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(17, 36, 20, 0.98), rgba(33, 64, 34, 0.92)),
+    linear-gradient(135deg, rgba(16, 32, 24, 0.98), rgba(41, 66, 45, 0.9)),
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 110px),
     var(--af-green-dark);
 }
@@ -284,8 +286,8 @@ a {
   z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 75% 35%, rgba(189, 125, 18, 0.18), transparent 28%),
-    linear-gradient(to top, rgba(8, 19, 10, 0.34), transparent 35%);
+    linear-gradient(to bottom, rgba(9, 17, 13, 0.06), transparent 28%),
+    linear-gradient(to top, rgba(8, 19, 10, 0.45), transparent 36%);
 }
 
 .af-hero-bg {
@@ -314,9 +316,9 @@ a {
   background:
     linear-gradient(
       to right,
-      rgba(8, 19, 10, 0.9) 0%,
-      rgba(8, 19, 10, 0.73) 48%,
-      rgba(8, 19, 10, 0.4) 100%
+      rgba(8, 19, 10, 0.92) 0%,
+      rgba(8, 19, 10, 0.76) 48%,
+      rgba(8, 19, 10, 0.34) 100%
     );
 }
 
@@ -346,16 +348,16 @@ a {
 }
 
 .af-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
-  line-height: 1.12;
+  font-size: clamp(2.55rem, 5vw, 4.65rem);
+  line-height: 1.06;
   margin-bottom: 1.25rem;
   color: #ffffff;
 }
 
 .af-hero-content .af-lead {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.2rem;
-  max-width: 600px;
+  font-size: 1.18rem;
+  max-width: 660px;
 }
 
 .af-hero-actions {
@@ -371,7 +373,7 @@ a {
   gap: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   padding-top: 2.5rem;
-  max-width: 560px;
+  max-width: 720px;
 }
 
 .af-hero-metrics strong {
@@ -390,14 +392,14 @@ a {
 .af-floating-note {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4px solid var(--af-accent-gold);
   backdrop-filter: blur(8px);
   padding: 1.25rem;
   border-radius: var(--af-radius-md);
   margin-top: 2.5rem;
-  max-width: 500px;
+  max-width: 560px;
 }
 
 .af-floating-note span {
@@ -423,7 +425,7 @@ a {
 .af-hero .af-btn-primary {
   background-color: var(--af-accent-gold);
   color: var(--af-white);
-  box-shadow: 0 6px 18px rgba(198, 146, 20, 0.45);
+  box-shadow: 0 10px 26px rgba(184, 121, 24, 0.32);
 }
 
 .af-hero .af-btn-primary:hover {
@@ -444,7 +446,7 @@ a {
 /* Farm process */
 .af-process-section {
   background:
-    linear-gradient(180deg, var(--af-white) 0%, var(--af-bg) 100%);
+    linear-gradient(180deg, var(--af-white) 0%, var(--af-cream) 100%);
   border-bottom: 1px solid var(--af-border);
 }
 
@@ -502,8 +504,8 @@ a {
   position: relative;
   margin-top: 1.5rem;
   width: 100%;
-  max-width: 280px;
-  height: 340px;
+  max-width: 310px;
+  height: 360px;
   border-radius: var(--af-radius-lg);
   overflow: hidden;
   border: 1px solid var(--af-border);
@@ -540,6 +542,53 @@ a {
 .af-buyer-head h2 {
   font-size: 2.35rem;
   line-height: 1.15;
+}
+
+.af-supply-section {
+  background: var(--af-white);
+  border-bottom: 1px solid var(--af-border);
+}
+
+.af-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.af-supply-step {
+  min-height: 220px;
+  padding: 1.5rem;
+  border: 1px solid var(--af-border);
+  border-radius: var(--af-radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(251, 250, 245, 0.98));
+  box-shadow: var(--af-shadow-sm);
+}
+
+.af-supply-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--af-radius-sm);
+  background: var(--af-green-dark);
+  color: var(--af-white);
+  font-weight: 900;
+  font-size: 0.82rem;
+  margin-bottom: 1.2rem;
+}
+
+.af-supply-step strong {
+  display: block;
+  color: var(--af-green-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.af-supply-step p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .af-process-grid {
@@ -590,7 +639,7 @@ a {
 /* Farm gallery */
 .af-gallery-section {
   padding: 0 0 6rem;
-  background: var(--af-bg);
+  background: var(--af-cream);
 }
 
 .af-gallery-grid {
@@ -609,7 +658,7 @@ a {
   max-height: 480px;
   margin: 0;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: var(--af-radius-lg);
   background: var(--af-green-dark);
   box-shadow: var(--af-shadow-md);
   border: 1px solid var(--af-border);
@@ -667,7 +716,7 @@ a {
   border: 1px solid var(--af-border);
   border-radius: var(--af-radius-lg);
   overflow: hidden;
-  box-shadow: var(--af-shadow-md);
+  box-shadow: var(--af-shadow-sm);
   margin-bottom: 2rem;
 }
 
@@ -678,7 +727,7 @@ a {
 }
 
 .af-stock-table th {
-  background: var(--af-green-light);
+  background: #f0f3ed;
   color: var(--af-green-dark);
   font-weight: 700;
   font-size: 0.85rem;
@@ -699,7 +748,7 @@ a {
 }
 
 .af-stock-table tr:hover td {
-  background-color: #f7faf5;
+  background-color: #fafbf7;
 }
 
 /* Stock product details cell */
@@ -712,7 +761,7 @@ a {
 .af-table-thumb {
   width: 64px;
   height: 64px;
-  border-radius: var(--af-radius-md);
+  border-radius: var(--af-radius-sm);
   overflow: hidden;
   border: 1px solid var(--af-border);
   flex-shrink: 0;
@@ -810,7 +859,7 @@ a {
   background: transparent;
   border: 1px solid transparent;
   padding: 0.5rem 1.25rem;
-  border-radius: var(--af-radius-md);
+  border-radius: var(--af-radius-sm);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--af-ink-soft);
@@ -926,7 +975,7 @@ a {
 .af-btn-primary {
   background-color: var(--af-green-dark);
   color: var(--af-white);
-  box-shadow: var(--af-shadow-sm);
+  box-shadow: 0 10px 22px rgba(16, 32, 24, 0.12);
 }
 
 .af-btn-primary:hover {
@@ -941,6 +990,7 @@ a {
 
 .af-btn-outline:hover {
   background-color: var(--af-green-light);
+  border-color: var(--af-green-sage);
 }
 
 .af-btn-ghost {
@@ -1116,7 +1166,7 @@ a {
   border: 1px solid var(--af-border);
   padding: 3rem;
   border-radius: var(--af-radius-lg);
-  box-shadow: var(--af-shadow-lg);
+  box-shadow: var(--af-shadow-md);
 }
 
 .af-contact-card h2 {
@@ -1193,7 +1243,7 @@ a {
 
 .af-order-prompt {
   background:
-    linear-gradient(135deg, rgba(255, 247, 223, 0.92), rgba(255, 255, 255, 0.96)),
+    linear-gradient(135deg, rgba(255, 245, 223, 0.94), rgba(255, 255, 255, 0.96)),
     url("https://images.unsplash.com/photo-1589927986089-35812388d1f4?q=80&w=1400&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
@@ -1201,7 +1251,7 @@ a {
   padding: 4rem 2rem;
   border-radius: var(--af-radius-lg);
   max-width: 760px;
-  box-shadow: var(--af-shadow-lg);
+  box-shadow: var(--af-shadow-md);
 }
 
 .af-order-prompt h2 {
@@ -1313,7 +1363,7 @@ a {
   gap: 0.75rem;
   font-size: 0.95rem;
   font-weight: 800;
-  box-shadow: 0 10px 25px rgba(198, 146, 20, 0.35);
+  box-shadow: 0 14px 32px rgba(184, 121, 24, 0.34);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1328,7 +1378,7 @@ a {
   color: var(--af-accent-gold);
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: var(--af-radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1619,6 +1669,12 @@ a {
   }
   .af-buyer-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .af-supply-grid {
+    grid-template-columns: 1fr;
+  }
+  .af-supply-step {
+    min-height: auto;
   }
   .af-gallery-grid {
     grid-template-columns: repeat(2, 1fr);

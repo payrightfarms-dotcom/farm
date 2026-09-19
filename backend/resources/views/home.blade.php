@@ -5,22 +5,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Payright Farms – Poultry Distributor & Processing Facility</title>
-  <meta name="description" content="Payright Farms is a commercial poultry farm and processing facility offering live broilers, dressed whole chickens, and cut parts at wholesale and retail prices." />
-  <meta name="keywords" content="poultry farm, chicken distributor, live broilers, dressed chicken, wholesale chicken, payright farms" />
+  <title>Payright Farms - Premium Poultry Farm, Processing & Distribution</title>
+  <meta name="description" content="Payright Farms is a premium poultry farm, processing, feed, eggs, and chicken distribution company supplying households, retailers, restaurants, and wholesale buyers." />
+  <meta name="keywords" content="premium poultry farm, chicken processing, live broilers, dressed chicken, wholesale chicken, eggs, poultry feed, Payright Farms" />
   <meta name="author" content="Payright Farms" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.payrightfarms.com/" />
-  <meta property="og:title" content="Payright Farms – Poultry Distributor & Processing Facility" />
-  <meta property="og:description" content="Live birds, freshly dressed whole chickens, and cut parts. Farm gate, delivery, and wholesale contracts available." />
+  <meta property="og:title" content="Payright Farms - Premium Poultry Farm, Processing & Distribution" />
+  <meta property="og:description" content="Healthy birds, hygienic processing, eggs, feed, fresh chicken, frozen supply, and dependable wholesale poultry distribution." />
   <meta property="og:image" content="{{ asset('assets/logo2.png') }}" />
   <link rel="canonical" href="https://www.payrightfarms.com/" />
   <link rel="icon" href="{{ asset('assets/logo2.png') }}" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=18" />
+  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=19" />
 </head>
 <body>
 
@@ -35,12 +35,12 @@
       </div>
 
       <nav class="af-nav">
-        <a href="#home">Overview</a>
-        <a href="#inventory">Inventory</a>
+        <a href="#home">Home</a>
+        <a href="#standards">Standards</a>
         <a href="#process">Process</a>
-        <a href="#about">Standards</a>
+        <a href="#inventory">Products</a>
         <a href="#contact">Contact</a>
-        <a href="#booking" class="af-btn af-btn-sm af-btn-outline" style="margin-left: 0.5rem;">Place Inquiry</a>
+        <a href="#booking" class="af-btn af-btn-sm af-btn-outline" style="margin-left: 0.5rem;">Request Supply</a>
       </nav>
 
       <button class="af-nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
@@ -69,35 +69,35 @@
       {{-- Hero content --}}
       <div class="af-hero-inner">
         <div class="af-hero-content">
-          <p class="af-kicker">Right Product · Right Price · Right Choice</p>
-          <h1>Healthy birds, clean processing, dependable chicken & feed supply.</h1>
+          <p class="af-kicker">Premium poultry supply</p>
+          <h1>Professional poultry farming, processing, and dependable distribution.</h1>
           <p class="af-lead">
-            To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice.
+            Payright Farms supplies healthy birds, fresh eggs, trusted poultry feed, dressed chicken, portioned cuts, and frozen stock for households, food businesses, retailers, and wholesale buyers.
           </p>
           <div class="af-hero-actions">
-            <a href="#inventory" class="af-btn af-btn-primary">View Stock Sheet</a>
-            <a href="#contact" class="af-btn af-btn-ghost">Get in Touch</a>
+            <a href="#inventory" class="af-btn af-btn-primary">View Products</a>
+            <a href="#booking" class="af-btn af-btn-ghost">Request Supply</a>
           </div>
 
           <div class="af-hero-metrics">
             <div>
-              <strong>Feed Sales</strong>
-              <span>Breedwell, Olam & Chikun</span>
+              <strong>Fresh Chicken</strong>
+              <span>Live, dressed, cut, and frozen</span>
             </div>
             <div>
-              <strong>Processing</strong>
-              <span>Dressed whole birds & cuts</span>
+              <strong>Farm Standards</strong>
+              <span>Clean handling and controlled workflow</span>
             </div>
             <div>
-              <strong>Egg Sales</strong>
-              <span>Bulk & retail crates</span>
+              <strong>Bulk Supply</strong>
+              <span>Retail, kitchen, and wholesale orders</span>
             </div>
           </div>
 
           <div class="af-floating-note">
             <span>Operations Schedule</span>
-            <strong data-business-hours-summary>Mon–Sat 8am – 10pm</strong>
-            <small><span data-business-hours-sunday>Sun 12noon – 10pm</span> · Farm gate pickup · Delivery · Wholesale contracts</small>
+            <strong data-business-hours-summary>Mon-Sat 8am - 10pm</strong>
+            <small><span data-business-hours-sunday>Sun 12noon - 10pm</span> · Farm gate pickup · Delivery · Wholesale contracts</small>
           </div>
         </div>
       </div>
@@ -109,10 +109,10 @@
         <div class="af-highlights-grid">
           @php
             $highlights = [
-              ['icon' => '🧩 01', 'label' => 'Feed Sales', 'sub' => 'Breedwell, Olam & Chikun poultry feeds'],
-              ['icon' => '🧩 02', 'label' => 'Chicken Processing', 'sub' => 'Clean slaughter house & portioning'],
-              ['icon' => '🧩 03', 'label' => 'Chicken Sales', 'sub' => 'Fresh whole chickens & cut parts'],
-              ['icon' => '🧩 04', 'label' => 'Egg Sales', 'sub' => 'Fresh crates in bulk & retail'],
+              ['icon' => '01', 'label' => 'Poultry Feed', 'sub' => 'Breedwell, Olam & Chikun poultry feeds'],
+              ['icon' => '02', 'label' => 'Chicken Processing', 'sub' => 'Clean slaughter-house dressing and portioning'],
+              ['icon' => '03', 'label' => 'Chicken Supply', 'sub' => 'Live birds, whole chicken, and cut parts'],
+              ['icon' => '04', 'label' => 'Egg Sales', 'sub' => 'Fresh crates for households and bulk buyers'],
             ];
           @endphp
           @foreach($highlights as $h)
@@ -129,13 +129,13 @@
     </section>
 
     {{-- ================ FARM PROCESS ================ --}}
-    <section class="af-section af-process-section" id="process">
+    <section class="af-section af-process-section" id="standards">
       <div class="af-container af-process">
         <div class="af-process-copy">
-          <p class="af-kicker">How We Supply Chicken</p>
-          <h2>Built around the decisions poultry buyers actually make.</h2>
+          <p class="af-kicker">What We Stand For</p>
+          <h2>Premium poultry starts long before the product reaches the buyer.</h2>
           <p>
-            Chicken buyers need confidence before they place volume orders: bird health, slaughter cleanliness, weight consistency, storage condition, and collection timing. The public site now explains those points clearly instead of only showing a price list.
+            We built Payright Farms for buyers who need confidence in bird health, processing hygiene, weight consistency, cold handling, and timely supply. Every order is handled with the same practical discipline, whether it is a household purchase or a planned wholesale request.
           </p>
           <div class="af-process-video-card">
             <video
@@ -154,19 +154,47 @@
         </div>
         <div class="af-process-grid">
           <div class="af-process-step">
-            <span>Breed & Rear</span>
-            <strong>Feed, water, housing, and flock observation</strong>
-            <p>Birds are monitored for growth, activity, and general health before they are released for sale or processing.</p>
+            <span>Farm Care</span>
+            <strong>Healthy birds raised with consistent attention</strong>
+            <p>Flocks are monitored for feed, water, ventilation, growth, activity, and general condition before sale or processing.</p>
           </div>
           <div class="af-process-step">
-            <span>Process Cleanly</span>
-            <strong>Controlled slaughter-house workflow</strong>
-            <p>Orders move through slaughter, scalding, defeathering, dressing, rinsing, and portioning with separation between dirty and clean handling stages.</p>
+            <span>Clean Processing</span>
+            <strong>A controlled slaughter-house workflow</strong>
+            <p>Orders move through slaughter, scalding, defeathering, dressing, rinsing, portioning, and packing with clear handling discipline.</p>
           </div>
           <div class="af-process-step">
-            <span>Pack & Chill</span>
-            <strong>Fresh dispatch or blast-frozen holding</strong>
+            <span>Cold Handling</span>
+            <strong>Prepared for pickup, delivery, or frozen storage</strong>
             <p>Products are prepared for farm-gate pickup, restaurant use, retail display, frozen storage, or scheduled delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{-- ================ SUPPLY PROCESS ================ --}}
+    <section class="af-section af-supply-section" id="process">
+      <div class="af-container">
+        <div class="af-section-head">
+          <p class="af-kicker">Supply Process</p>
+          <h2>From farm request to confirmed dispatch.</h2>
+          <p>Simple, transparent order handling for buyers who care about quality, timing, and predictable pricing.</p>
+        </div>
+        <div class="af-supply-grid">
+          <div class="af-supply-step">
+            <span>01</span>
+            <strong>Confirm Product Format</strong>
+            <p>Choose live birds, dressed whole chicken, cut parts, frozen stock, eggs, or poultry feed.</p>
+          </div>
+          <div class="af-supply-step">
+            <span>02</span>
+            <strong>Agree Quantity & Timing</strong>
+            <p>We confirm availability, preferred collection or delivery date, and any processing notes.</p>
+          </div>
+          <div class="af-supply-step">
+            <span>03</span>
+            <strong>Prepare & Dispatch</strong>
+            <p>Your order is processed, packed, priced clearly, and released for farm-gate pickup or delivery.</p>
           </div>
         </div>
       </div>
@@ -190,8 +218,8 @@
             <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
           </video>
           <figcaption>
-            <strong>Processing capacity</strong>
-            <span>Organized line flow from dressing to packing.</span>
+            <strong>Processing Capacity</strong>
+            <span>Organized flow from dressing to packing.</span>
           </figcaption>
         </figure>
         <figure>
@@ -203,7 +231,7 @@
             onerror="this.hidden=true"
           />
           <figcaption>
-            <strong>Packaged for sale</strong>
+            <strong>Prepared for Sale</strong>
             <span>Clean handling for retail and kitchen use.</span>
           </figcaption>
         </figure>
@@ -217,9 +245,9 @@
         <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
           <div>
             <p class="af-kicker">Featured Products</p>
-            <h2 style="font-size:2rem; margin:0;">Top-selling inventory items</h2>
+            <h2 style="font-size:2rem; margin:0;">Popular poultry and farm products</h2>
           </div>
-          <a href="#inventory" class="af-btn af-btn-ghost af-btn-sm">View Full Stock Sheet →</a>
+          <a href="#inventory" class="af-btn af-btn-ghost af-btn-sm">View Full Product List</a>
         </div>
 
         <div class="af-stock-table-wrapper" id="featuredGrid">
@@ -307,9 +335,9 @@
       <div class="af-container">
         <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.5rem; flex-wrap:wrap; gap:1rem;">
           <div>
-            <p class="af-kicker">Live Inventory</p>
-            <h2 style="font-size:2rem; margin:0;">Full Stock & Price Sheet</h2>
-            <p style="margin-top:0.5rem; margin-bottom:0;">Live product availability, processing format, and farm-gate pricing.</p>
+            <p class="af-kicker">Products & Availability</p>
+            <h2 style="font-size:2rem; margin:0;">Current poultry supply list</h2>
+            <p style="margin-top:0.5rem; margin-bottom:0;">Live availability, processing format, and farm-gate pricing for direct inquiries.</p>
           </div>
         </div>
 
@@ -409,8 +437,8 @@
       <div class="af-container af-order-placeholder">
         <div class="af-order-prompt">
           <p class="af-kicker">Booking Sheet</p>
-          <h2>Submit a procurement inquiry with the details we need.</h2>
-          <p style="max-width:560px; margin:0 auto 2rem;">Add products to your inquiry sheet, then send your contact name, quantity, pickup or delivery choice, preferred date, and any cut-size or packaging notes.</p>
+          <h2>Request poultry supply with the details we need.</h2>
+          <p style="max-width:560px; margin:0 auto 2rem;">Add products to your booking sheet, then send your contact name, quantity, pickup or delivery choice, preferred date, and any cut-size or packaging notes.</p>
           <div class="af-order-checks" aria-label="Inquiry details">
             <span>Quantity</span>
             <span>Pickup or delivery</span>
@@ -430,22 +458,22 @@
             <p class="af-kicker">About Payright Farms</p>
             <span class="af-about-badge">Guided by grace</span>
           </div>
-          <h2>A commercial poultry facility built on practical hygiene and integrity.</h2>
+          <h2>A poultry brand built on quality, hygiene, value, and trust.</h2>
           <p>
-            Payright Farms is a poultry operation covering rearing, live bird sales, slaughter-house processing, and distribution to retail and wholesale buyers. We identified a gap in the local market for affordable, hygienically processed chicken and built a facility to close it.
+            Payright Farms is a modern poultry operation covering rearing, poultry feed sales, egg sales, live bird supply, slaughter-house processing, and distribution to retail and wholesale buyers. We identified a gap in the local market for affordable, hygienically processed chicken and built a facility to close it.
           </p>
           <div class="af-mission-card">
             <p>"To ensure our loyal customers always pay the right price for the right product and henceforth make us their right choice."</p>
           </div>
           <p>
-            Our birds are raised with attention to feed, water, ventilation, stocking density, and handling. At the slaughter house, birds are processed with a clean workflow and moved into chilled storage or dispatch. We supply fresh and blast-frozen products to households, restaurants, food vendors, retailers, and commercial buyers.
+            Our birds are raised with attention to feed, water, ventilation, stocking density, and handling. At the slaughter house, products move through a clean workflow into chilled storage or dispatch. We supply fresh and blast-frozen products to households, restaurants, food vendors, retailers, and commercial buyers.
           </p>
           <div class="af-about-pills">
             <span>Live Bird Supply</span>
             <span>On-site Processing</span>
+            <span>Eggs & Poultry Feed</span>
             <span>Retail & Wholesale</span>
             <span>Farm Gate Pickup</span>
-            <span>Refrigerated Delivery</span>
           </div>
           <div class="af-about-signoff">
             <span class="af-script">With gratitude,</span>
@@ -464,27 +492,27 @@
           </div>
           <div class="af-about-card">
             <span class="af-about-pill">Our Operating Standards</span>
-            <p>Every product leaving the farm meets strict hygiene and traceability requirements.</p>
+            <p>Every product leaving the farm is handled with clear standards and practical accountability.</p>
             <ul class="af-about-checklist">
               <li>Birds checked for size, activity, and general health before dispatch.</li>
               <li>Clean processing workflow from slaughter to rinsing and packaging.</li>
               <li>Chilled handling from processing to pickup or delivery.</li>
               <li>Wholesale contracts with volume planning and clear price updates.</li>
-              <li>Operations guided by integrity and faith in God's grace.</li>
+              <li>Clear communication on price, quantity, timing, and buyer requirements.</li>
             </ul>
           </div>
           <div class="af-about-stats">
             <div>
-              <strong>Daily</strong>
-              <span>Fresh processing</span>
+              <strong>Fresh</strong>
+              <span>Daily preparation</span>
             </div>
             <div>
               <strong>B2B</strong>
               <span>Wholesale supply</span>
             </div>
             <div>
-              <strong>10+</strong>
-              <span>Years farming</span>
+              <strong>Retail</strong>
+              <span>Direct buyers</span>
             </div>
           </div>
         </div>
@@ -496,7 +524,7 @@
       <div class="af-container">
         <div class="af-buyer-head">
           <p class="af-kicker">Buyer Guide</p>
-          <h2>Choose the supply format that fits your kitchen or business.</h2>
+          <h2>Choose the supply format that fits your household, kitchen, or business.</h2>
         </div>
         <div class="af-buyer-grid">
           <div class="af-buyer-card">
@@ -553,7 +581,7 @@
         <div class="af-contact-card">
           <p class="af-kicker">Get in Touch</p>
           <h2>Procurement & Distribution Inquiries</h2>
-          <p>Contact us directly for live bird pricing, volume orders, custom processing requests, or distribution contracts.</p>
+          <p>Contact us directly for live bird pricing, eggs, poultry feed, volume orders, custom processing requests, or distribution contracts.</p>
           <div class="af-contact-grid">
             <div>
               <strong>Phone / WhatsApp</strong>
@@ -569,7 +597,7 @@
             </div>
             <div>
               <strong>Operating Hours</strong>
-              <p><span data-business-hours-weekday>Mon. – Sat.: 8am – 10pm</span><br /><span data-business-hours-sunday>Sun.: 12noon – 10pm</span></p>
+              <p><span data-business-hours-weekday>Mon. - Sat.: 8am - 10pm</span><br /><span data-business-hours-sunday>Sun.: 12noon - 10pm</span></p>
             </div>
           </div>
         </div>
@@ -590,7 +618,7 @@
               </svg>
             </a>
           </div>
-          <a href="#booking" class="af-btn af-btn-primary">Submit Procurement Inquiry</a>
+          <a href="#booking" class="af-btn af-btn-primary">Submit Supply Inquiry</a>
         </div>
       </div>
     </section>
@@ -678,11 +706,11 @@
         </p>
       </div>
       <div class="af-footer-bottom">
-        <span>© <span id="year"></span> Payright Farms · Commercial Poultry Distributor & Processing Facility</span>
+        <span>© <span id="year"></span> Payright Farms · Premium Poultry Farm, Processing & Distribution</span>
       </div>
     </div>
   </footer>
 
-  <script src="{{ asset('script.js') }}?v=38" defer></script>
+  <script src="{{ asset('script.js') }}?v=39" defer></script>
 </body>
 </html>
