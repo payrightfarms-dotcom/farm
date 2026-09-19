@@ -1071,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const buildWhatsAppUrl = ({ name, phone, note, service, time, order }) => {
     const lines = [
-      "New Order - Acie Fraiche Cafe",
+      "New Order - Payright Farms",
       "",
       order?.code ? `Order Code: ${order.code}` : "",
       `Name: ${name}`,

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Acie Fraiche Admin</title>
+    <title>Payright Farms Admin</title>
     <link rel="icon" href="/assets/logo2.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -523,7 +523,7 @@
                     <h2>Public Site Preview</h2>
                     <p class="muted">This loads the current landing page so you can keep visuals aligned.</p>
                     <div class="frame-wrap">
-                        <iframe src="/live.html" title="Public site preview"></iframe>
+                        <iframe src="/" title="Public site preview"></iframe>
                     </div>
                 </div>
             </section>
@@ -1711,7 +1711,7 @@
                     <html>
                         <head><title>Receipt ${order.code || ''}</title></head>
                         <body style="font-family: Arial, sans-serif; padding:16px;">
-                            <h2 style="margin:0 0 8px;">Acie Fraiche Cafe</h2>
+                            <h2 style="margin:0 0 8px;">Payright Farms</h2>
                             <div style="margin-bottom:10px;">Order Code: <strong>${order.code || ''}</strong></div>
                             <table style="width:100%; border-collapse: collapse;">
                                 <thead>

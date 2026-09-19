@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Staff Desk | Acie Fraiche</title>
+    <title>Staff Desk | Payright Farms</title>
     <link rel="icon" href="/assets/logo2.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +78,7 @@
 <body>
     <header>
         <div style="display:flex; align-items:center; gap:12px;">
-            <img src="/assets/logo2.png" alt="Acie Fraiche" style="width:46px; height:46px; border-radius:14px; border:1px solid var(--line); background:#fff; padding:6px;">
+            <img src="/assets/logo2.png" alt="Payright Farms" style="width:46px; height:46px; border-radius:14px; border:1px solid var(--line); background:#fff; padding:6px;">
             <div>
                 <h1>Staff Desk</h1>
                 <p class="muted">Confirm orders, push to kitchen, update customers.</p>

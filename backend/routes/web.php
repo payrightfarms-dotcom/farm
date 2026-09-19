@@ -18,7 +18,22 @@ Route::get('/script.js', function () {
 
 // Admin preview of the public site
 Route::get('/live.html', function () {
-    return response()->file(public_path('live.html'), ['Content-Type' => 'text/html']);
+    try {
+        $categories = Category::orderBy('sort_order')->orderBy('name')->get();
+        $menuItems = MenuItem::with('category')
+            ->where('is_active', true)
+            ->orderBy('sort_order')
+            ->orderBy('name')
+            ->get();
+        $featured = $menuItems->take(3);
+    } catch (QueryException $e) {
+        report($e);
+        $categories = collect();
+        $menuItems = collect();
+        $featured = collect();
+    }
+
+    return view('home', compact('categories', 'menuItems', 'featured'));
 });
 
 Route::get('/assets/{file}', function ($file) {

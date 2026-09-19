@@ -820,7 +820,7 @@
                     <html>
                         <head><title>Receipt ${order.code || ''}</title></head>
                         <body style="font-family: Arial, sans-serif; padding:16px;">
-                            <h2 style="margin:0 0 8px;">Acie Fraiche Cafe</h2>
+                            <h2 style="margin:0 0 8px;">Payright Farms</h2>
                             <div style="margin-bottom:10px;">Order Code: <strong>${order.code || ''}</strong></div>
                             <table style="width:100%; border-collapse: collapse;">
                                 <thead>
