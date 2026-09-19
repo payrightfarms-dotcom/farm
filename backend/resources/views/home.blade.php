@@ -177,11 +177,15 @@
               playsinline
               webkit-playsinline
               preload="auto"
-              poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.jpg"
+              poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.jpg"
             >
-              <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
-              <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
             </video>
+            <div class="af-video-caption">
+              <strong>Processing Capacity</strong>
+              <span>Organized flow from dressing to packing.</span>
+            </div>
           </div>
         </div>
         <div class="af-process-grid">
@@ -243,15 +247,15 @@
             playsinline
             webkit-playsinline
             preload="auto"
-            poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.jpg"
+            poster="https://res.cloudinary.com/jeoesphr/video/upload/so_0,q_auto,f_jpg,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.jpg"
             class="af-gallery-autoplay"
           >
-            <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_800/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
-            <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789405318/WhatsApp_Video_2026-09-14_at_17.13.38.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/jeoesphr/video/upload/q_auto,f_auto,w_600/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/jeoesphr/video/upload/v1789404062/WhatsApp_Video_2026-09-14_at_17.13.26.mp4" type="video/mp4" />
           </video>
           <figcaption>
-            <strong>Processing Capacity</strong>
-            <span>Organized flow from dressing to packing.</span>
+            <strong>Clean Processing</strong>
+            <span>Careful poultry handling from preparation to dispatch.</span>
           </figcaption>
         </figure>
         <figure>

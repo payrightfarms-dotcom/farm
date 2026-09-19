@@ -646,6 +646,29 @@ a {
   display: block;
 }
 
+.af-video-caption {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem;
+  border-radius: var(--af-radius-md);
+  background: rgba(36, 25, 18, 0.76);
+  color: var(--af-white);
+  backdrop-filter: blur(8px);
+}
+
+.af-video-caption strong {
+  font-size: 1rem;
+}
+
+.af-video-caption span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.88rem;
+}
+
 
 
 .af-process-photo img,
