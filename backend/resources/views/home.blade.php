@@ -27,7 +27,7 @@
   <header class="af-header">
     <div class="af-container af-header-inner">
       <div class="af-logo-wrap">
-        <img src="{{ asset('assets/logo.png') }}" alt="Payright Farms Logo" style="width: 44px; height: 44px; object-fit: contain; flex-shrink: 0;" />
+        <img class="af-navbar-logo" src="{{ asset('assets/logo.png') }}" alt="Payright Farms Logo" />
         <div class="af-logo-text">
           <span class="af-logo-name">Payright Farms</span>
           <span class="af-logo-tagline">Right Product · Right Price · Right Choice</span>
