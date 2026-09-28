@@ -314,7 +314,7 @@
                       $resolvedImg = $item->image_url;
                     @endphp
                     @if ($resolvedImg)
-                      <img src="{{ $resolvedImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.remove(); this.parentElement.classList.add('af-product-media-unavailable');" />
+                      <img src="{{ $resolvedImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('af-product-media-unavailable'); this.remove();" />
                     @endif
                     <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
                   </div>
@@ -397,7 +397,7 @@
                         $resolvedCatalogImg = $item->image_url;
                       @endphp
                       @if ($resolvedCatalogImg)
-                        <img src="{{ $resolvedCatalogImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.remove(); this.parentElement.classList.add('af-product-media-unavailable');" />
+                        <img src="{{ $resolvedCatalogImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('af-product-media-unavailable'); this.remove();" />
                       @endif
                       <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
                     </div>
@@ -746,6 +746,6 @@
     </div>
   </footer>
 
-  <script src="{{ asset('script.js') }}?v=40" defer></script>
+  <script src="{{ asset('script.js') }}?v=41" defer></script>
 </body>
 </html>
