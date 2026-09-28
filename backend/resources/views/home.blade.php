@@ -307,11 +307,23 @@
                   data-category="{{ Str::slug(optional($item->category)->name ?? 'general') }}"
                 >
                   <div class="af-product-media">
-                      @if($item->image_url)
-                        <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                      @else
-                        <img src="https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                      @endif
+                    @php
+                      $catName = optional($item->category)->name ?? '';
+                      $itemName = $item->name ?? '';
+                      $resolvedImg = $item->image_url;
+                      if (!$resolvedImg) {
+                          if (Str::contains($catName, 'Egg', true) || Str::contains($itemName, 'Egg', true)) {
+                              $resolvedImg = 'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=800&auto=format&fit=crop';
+                          } elseif (Str::contains($catName, 'Feed', true) || Str::contains($itemName, 'Starter', true) || Str::contains($itemName, 'Grower', true) || Str::contains($itemName, 'Finisher', true)) {
+                              $resolvedImg = 'https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop';
+                          } elseif (Str::contains($itemName, 'Whole', true) || Str::contains($itemName, 'Cut', true)) {
+                              $resolvedImg = 'https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=800&auto=format&fit=crop';
+                          } else {
+                              $resolvedImg = 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=800&auto=format&fit=crop';
+                          }
+                      }
+                    @endphp
+                    <img src="{{ $resolvedImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=800&auto=format&fit=crop';" />
                     <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
                   </div>
                   <div class="af-product-body">
@@ -387,11 +399,23 @@
                     data-category="{{ $catSlug }}"
                   >
                     <div class="af-product-media">
-                        @if($item->image_url)
-                          <img src="{{ $item->image_url }}" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                        @else
-                          <img src="https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop" alt="{{ $item->name }}" loading="lazy" decoding="async" />
-                        @endif
+                      @php
+                        $catName = optional($item->category)->name ?? '';
+                        $itemName = $item->name ?? '';
+                        $resolvedCatalogImg = $item->image_url;
+                        if (!$resolvedCatalogImg) {
+                            if (Str::contains($catName, 'Egg', true) || Str::contains($itemName, 'Egg', true)) {
+                                $resolvedCatalogImg = 'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=800&auto=format&fit=crop';
+                            } elseif (Str::contains($catName, 'Feed', true) || Str::contains($itemName, 'Starter', true) || Str::contains($itemName, 'Grower', true) || Str::contains($itemName, 'Finisher', true)) {
+                                $resolvedCatalogImg = 'https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=800&auto=format&fit=crop';
+                            } elseif (Str::contains($itemName, 'Whole', true) || Str::contains($itemName, 'Cut', true)) {
+                                $resolvedCatalogImg = 'https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=800&auto=format&fit=crop';
+                            } else {
+                                $resolvedCatalogImg = 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=800&auto=format&fit=crop';
+                            }
+                        }
+                      @endphp
+                      <img src="{{ $resolvedCatalogImg }}" alt="{{ $item->name }}" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1587593817642-8b9a751c1a3e?q=80&w=800&auto=format&fit=crop';" />
                       <span class="af-spec-badge">{{ optional($item->category)->name ?? 'General' }}</span>
                     </div>
                     <div class="af-product-body">
