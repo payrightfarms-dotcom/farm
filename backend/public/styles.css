@@ -1412,6 +1412,85 @@ a {
   display: block;
 }
 
+/* Managing Director */
+.af-leadership-section {
+  background: var(--af-white);
+  border-bottom: 1px solid var(--af-border);
+}
+
+.af-leadership {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.84fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.af-leadership-portrait {
+  aspect-ratio: 4 / 5;
+  max-width: 460px;
+  overflow: hidden;
+  border: 1px solid var(--af-border);
+  border-radius: var(--af-radius-lg);
+  background: var(--af-green-light);
+  box-shadow: var(--af-shadow-md);
+}
+
+.af-leadership-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.af-leadership-copy {
+  max-width: 650px;
+}
+
+.af-leadership-role {
+  margin: 0.15rem 0 0.6rem;
+  color: var(--af-red);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.af-leadership-copy h2 {
+  margin-bottom: 1.25rem;
+  color: var(--af-green-dark);
+  font-size: 2.5rem;
+}
+
+.af-leadership-copy > p:not(.af-kicker):not(.af-leadership-role) {
+  color: var(--af-ink-soft);
+  line-height: 1.75;
+}
+
+.af-leadership-quote {
+  margin: 1.75rem 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 4px solid var(--af-accent-gold);
+  background: var(--af-egg);
+  color: var(--af-green-dark);
+  font-family: var(--af-font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.af-leadership-signoff {
+  display: grid;
+  gap: 0.15rem;
+  color: var(--af-ink-soft);
+  font-size: 0.88rem;
+}
+
+.af-leadership-signoff strong {
+  color: var(--af-green-dark);
+  font-size: 1rem;
+}
+
 /* Contact Section */
 .af-contact {
   display: grid;
@@ -1926,6 +2005,13 @@ a {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  .af-leadership {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .af-leadership-portrait {
+    width: min(100%, 460px);
+  }
   .af-process-grid {
     height: auto;
     grid-template-rows: none;
@@ -2037,6 +2123,7 @@ a {
   .af-process-copy h2,
   .af-buyer-head h2,
   .af-about-copy h2,
+  .af-leadership-copy h2,
   .af-contact-card h2,
   .af-order-prompt h2 {
     font-size: 1.85rem;

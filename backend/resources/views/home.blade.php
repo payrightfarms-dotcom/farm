@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=20" />
+  <link rel="stylesheet" href="{{ asset('styles.css') }}?v=21" />
 </head>
 <body>
 
@@ -40,6 +40,7 @@
         <a href="#standards">Processing</a>
         <a href="#inventory">Products</a>
         <a href="#about">Mission</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
         <a href="#booking" class="af-btn af-btn-sm af-btn-outline" style="margin-left: 0.5rem;">Order Inquiry</a>
       </nav>
@@ -514,6 +515,40 @@
               <strong>Retail</strong>
               <span>Daily buyers</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{-- ================ MANAGING DIRECTOR ================ --}}
+    <section class="af-section af-leadership-section" id="leadership">
+      <div class="af-container af-leadership">
+        <div class="af-leadership-portrait">
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1100&q=85"
+            alt="Placeholder portrait for Payright Farms Managing Director"
+            loading="lazy"
+            decoding="async"
+            onerror="this.hidden=true"
+          />
+        </div>
+
+        <div class="af-leadership-copy">
+          <p class="af-kicker">Leadership</p>
+          <p class="af-leadership-role">Managing Director</p>
+          <h2>Amina Adeyemi</h2>
+          <p>
+            Amina leads Payright Farms with a practical belief: dependable food supply starts with dependable standards. Her focus is on building a farm customers can trust for quality, fair pricing, and responsive service at every stage of the journey.
+          </p>
+          <p>
+            From feed and flock care to hygienic processing, poultry products, and fresh eggs, she keeps the business focused on the details that matter most to households, retailers, and bulk buyers.
+          </p>
+          <blockquote class="af-leadership-quote">
+            “We earn trust by making every order clear, consistent, and worth coming back for.”
+          </blockquote>
+          <div class="af-leadership-signoff">
+            <span>Managing Director</span>
+            <strong>Payright Farms</strong>
           </div>
         </div>
       </div>
