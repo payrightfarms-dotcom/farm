@@ -922,6 +922,10 @@ a {
   transition: transform 0.35s ease;
 }
 
+.af-product-media-unavailable {
+  background: var(--af-surface-soft);
+}
+
 .af-product-card:hover .af-product-media img {
   transform: scale(1.045);
 }

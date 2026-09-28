@@ -692,7 +692,7 @@ document.addEventListener("DOMContentLoaded", () => {
           data-category="${item.categorySlug}"
         >
           <div class="af-product-media">
-            <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
+            ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.remove(); this.parentElement.classList.add('af-product-media-unavailable');" />` : ""}
             <span class="af-spec-badge">${item.categoryName}</span>
           </div>
           <div class="af-product-body">
@@ -742,7 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.setAttribute("data-category", item.categorySlug);
     card.innerHTML = `
       <div class="af-product-media">
-        <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
+        ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.remove(); this.parentElement.classList.add('af-product-media-unavailable');" />` : ""}
         <span class="af-spec-badge">${item.categoryName}</span>
       </div>
       <div class="af-product-body">
@@ -805,7 +805,7 @@ document.addEventListener("DOMContentLoaded", () => {
           data-category="${item.categorySlug}"
         >
           <div class="af-product-media">
-            <img src="${item.imageUrl || "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?q=80&w=900&auto=format&fit=crop"}" alt="${item.name}" loading="lazy" decoding="async" />
+            ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.remove(); this.parentElement.classList.add('af-product-media-unavailable');" />` : ""}
             <span class="af-spec-badge">${item.categoryName}</span>
           </div>
           <div class="af-product-body">
